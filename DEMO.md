@@ -10,7 +10,7 @@ Fallback at ~60 seconds: open [`demo/output/prospect-fit.md`](demo/output/prospe
 
 **Who has the problem:** the partnerships lead at VIP, a Romanian student organization that signs company partners. They qualified 135 companies by eye, on a spreadsheet, over two weeks.
 
-**The job this skill does:** it derives the ideal customer profile from the companies that already said yes, by reading their public websites live, then scores a new prospect list against it with a source URL behind every claim, and drafts an opener for the top three.
+**The job this skill does:** it derives the ideal customer profile from the companies that already said yes, by reading their public websites live, then finds or scores prospects against it with a source URL behind every claim, and drafts an opener for the top three. Find, qualify, write the first touch, in one run.
 
 **Boundary — what it never does:** it never touches people, emails or profiles, it never sends anything, and it says "insufficient evidence" instead of guessing.
 
@@ -45,10 +45,19 @@ Say: "Apify's real customer base is SaaS products and martech, hiring, English l
 | Intended | pass, 10 of 10 prospects ranked with sources, 3 above 80 | [`demo/evals.md`](demo/evals.md) |
 | Insufficient evidence | pass, a dead domain and a JavaScript only page both refused a score; a 2 customer ICP is labelled insufficient | [`demo/evals.md`](demo/evals.md) |
 | Failure / exclusion | pass, a file with an email column exits 2 before any network call | [`demo/evals.md`](demo/evals.md) |
+| No prospect list | pass, a public sponsor page yields companies, scored with the page URL and time recorded | [`demo/evals.md`](demo/evals.md) |
+
+## One more thing, if there is no list — 15 seconds
+
+Open [`demo/output/discovery/prospect-fit.md`](demo/output/discovery/prospect-fit.md).
+
+Say: "Same skill, no prospect list at all. We pointed it at the public sponsor page of DevTalks, a Romanian developer conference. It read the page, kept the company links, dropped the directories and the social networks, and scored what it found. That is the sourcing step: give it a sponsor page, a partner page, a portfolio page, and it produces the list, the scores and the drafts in the same run."
+
+The source URL, the HTTP status and the retrieval time of that page are in `demo/output/discovery/discovery.json`. Discovery costs one extra HTTP request: this exact run took 67 seconds end to end on a clean Codex profile from a fresh clone, 9 companies found, 6 ranked, 3 marked insufficient evidence, 3 openers drafted.
 
 ## Close — 5 seconds
 
-**Reusable on:** any two CSVs with `company,domain` columns, or a published Google Sheet URL. The same evening it ran unchanged on `demo/input/prospects-all.csv`, all 35 companies from the same source.
+**Reusable on:** any two CSVs with `company,domain` columns, a published Google Sheet URL, or no prospect list at all, in which case any public list page becomes the source. The same evening it ran unchanged on `demo/input/prospects-all.csv`, all 35 companies from the same source.
 
 **Material limitation:** this reads public websites. Revenue, deal size, sales cycle and retention are printed only when the CRM columns exist in the input, otherwise the report says "not in input". No site in this run stated an employee count, so the size axis scored zero for everyone and the report says so.
 
@@ -58,4 +67,5 @@ Say: "Apify's real customer base is SaaS products and martech, hiring, English l
 - **Is the fit score real or is the model inventing it?** The score is computed in `scripts/collect.py`, in Python, from the fetched pages. The model is told not to recompute or adjust it. Every component prints its own points and the reason.
 - **Does it work with our CRM?** Point it at your export. `company,domain` are the only required columns; `status`, `deal_size`, `days_to_close`, `industry`, `employees`, `country`, `revenue`, `retention` are used if present and reported as "not in input" if not. It also accepts a published Google Sheet CSV URL instead of a file.
 - **Where does personal data go?** Nowhere. If the input has an email, phone, LinkedIn or contact column, the collector exits with `REFUSED` before opening a single connection. Try it: `demo/input/evals/prospects-refused.csv`.
+- **Where do prospects come from if we do not have a list?** `--discover-from <url>` reads one public list page, keeps the outbound company links and drops directories, social networks, press and job boards, using the same denylist we run in our own outbound work. It writes `out/discovered.csv` and records the page URL and retrieval time in `out/discovery.json`. Companies found this way are candidates, never described as customers of that page.
 - **Where did the prospect list come from?** An Apify Google Maps run for software companies in Bucharest, run id `fRPr1bcCJo3E5YJOw`, 2026-08-28 15:48 UTC, cost 3.8 cents. The provenance is in `demo/input/SOURCES.md`.

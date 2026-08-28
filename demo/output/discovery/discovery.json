@@ -1,0 +1,44 @@
+{
+  "source_url": "https://www.devtalks.ro/",
+  "retrieved_at": "2026-08-28T16:40:39Z",
+  "http_status": 200,
+  "found": 9,
+  "companies": [
+    {
+      "company": "myconnector",
+      "domain": "myconnector.ro"
+    },
+    {
+      "company": "ad/01",
+      "domain": "ad01.com"
+    },
+    {
+      "company": "Work in Finland",
+      "domain": "workinfinland.com"
+    },
+    {
+      "company": "Amazon",
+      "domain": "amazon.com"
+    },
+    {
+      "company": "bookingholdings",
+      "domain": "bookingholdings.com"
+    },
+    {
+      "company": "Keysight",
+      "domain": "keysight.com"
+    },
+    {
+      "company": "Vodafone Romania",
+      "domain": "vodafone.ro"
+    },
+    {
+      "company": "Catalyst Solutions",
+      "domain": "catalyst.ro"
+    },
+    {
+      "company": "Archweb Systems",
+      "domain": "archweb.ro"
+    }
+  ]
+}
