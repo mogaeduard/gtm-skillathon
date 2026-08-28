@@ -706,6 +706,78 @@ def _shares(d, limit=4):
     items = sorted(d.items(), key=lambda kv: -kv[1])[:limit]
     return ", ".join("%s %s" % (k, _pct(v)) for k, v in items)
 
+# Denylist adapted from the outbound pipeline's domain resolver: these hosts are
+# directories, social networks, press and job boards, never a company's own site.
+EXCLUDE_HOSTS = set("""
+facebook.com linkedin.com instagram.com tiktok.com youtube.com twitter.com x.com t.co
+wikipedia.org google.com bing.com duckduckgo.com apple.com microsoft.com adobe.com
+indeed.com glassdoor.com ejobs.ro hipo.ro bestjobs.ro olx.ro emag.ro listafirme.ro termene.ro
+risco.ro mfinante.gov.ro anaf.ro tripadvisor.com booking.com crunchbase.com g2.com capterra.com
+trustpilot.com producthunt.com github.com gitlab.com discord.com discord.gg slack.com reddit.com
+medium.com substack.com forbes.ro zf.ro profit.ro hotnews.ro digi24.ro adevarul.ro startupcafe.ro
+wall-street.ro ziare.com stirileprotv.ro capital.ro gravatar.com w3.org schema.org creativecommons.org
+googletagmanager.com google-analytics.com gstatic.com cloudflare.com jsdelivr.net unpkg.com
+goo.gl bit.ly lnkd.in forms.gle about.google maps.google.com policies.google.com blog.google
+wa.me whatsapp.com telegram.me t.me vimeo.com flickr.com pinterest.com spotify.com paypal.com
+mailchimp.com sendgrid.com stripe.com amazonaws.com azurewebsites.net vercel.app netlify.app
+hubspot.com intercom.io crisp.chat typeform.com calendly.com eventbrite.com meetup.com luma.com
+""".split())
+
+def _excluded(host):
+    for ex in EXCLUDE_HOSTS:
+        if host == ex or host.endswith("." + ex):
+            return True
+    return False
+
+def discover(list_url, limit, outdir):
+    """Extract company domains from one public list page (customers, sponsors, portfolio,
+    directory). Keyless: one GET, then link and logo-label extraction."""
+    page = fetch(list_url)
+    if not page.get("http_status"):
+        print("DISCOVERY FAILED: could not fetch %s (%s)" % (list_url, page.get("error")))
+        return [], page
+    html_body = page.get("html") or ""
+    src_host = urllib.parse.urlparse(page.get("final_url") or list_url).netloc.lower().replace("www.", "")
+    found, order = {}, []
+    for m in re.finditer(r'<a[^>]+href="(https?://[^"]+)"[^>]*>(.*?)</a>', html_body, re.S | re.I):
+        url, inner = m.group(1), m.group(2)
+        host = urllib.parse.urlparse(url).netloc.lower().replace("www.", "")
+        if not host or host == src_host or host.endswith("." + src_host) or _excluded(host):
+            continue
+        # brightdata.es / brightdata.jp off brightdata.com are the same brand, not prospects
+        if host.split(".")[0] == src_host.split(".")[0]:
+            continue
+        label = re.search(r'alt="([^"]{2,60})"', inner)
+        label = label.group(1) if label else re.sub(r"<[^>]+>", " ", inner)
+        label = re.sub(r"\s+", " ", label).strip(" .,|-")
+        if not label or len(label) > 60 or re.search(r"@|\+\d|linkedin\.com/in/", label):
+            continue
+        # call-to-action link text is not a company name; fall back to the domain root
+        if re.search(r"ticket|register|apply|read more|learn more|click|here|sign up|book|buy|"
+                     r"contact|home|menu|more$", label, re.I):
+            label = host.split(".")[0]
+        if host not in found:
+            found[host] = re.sub(r"\s+logo$", "", label, flags=re.I) or host.split(".")[0]
+            order.append(host)
+    rows = [{"company": found[h], "domain": h} for h in order[:limit]]
+    path = os.path.join(outdir, "discovered.csv")
+    os.makedirs(outdir, exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["company", "domain"])
+        for r in rows:
+            w.writerow([r["company"], r["domain"]])
+    # provenance lives beside the CSV: the input file itself stays free of any
+    # column the personal-data guard would have to reason about.
+    with open(os.path.join(outdir, "discovery.json"), "w", encoding="utf-8") as f:
+        json.dump({"source_url": page.get("final_url") or list_url,
+                   "retrieved_at": page.get("retrieved_at"),
+                   "http_status": page.get("http_status"),
+                   "found": len(rows), "companies": rows}, f, indent=2)
+    print("DISCOVERED %d companies from %s (retrieved %s) -> %s"
+          % (len(rows), page.get("final_url") or list_url, page.get("retrieved_at"), path))
+    return rows, page
+
 def write_openers_input(icp, ranked, companies_by_domain, offer_path, outdir):
     """Slim file so the drafting step never has to read the big JSON."""
     offer_name, offer_lines = "the offer", []
@@ -822,6 +894,8 @@ def main():
     ap.add_argument("--budget", type=float, default=20.0)
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--offer", default="demo/input/offer.md")
+    ap.add_argument("--discover-from", help="public list page (customers/sponsors/portfolio/directory) to source prospects from")
+    ap.add_argument("--discover-limit", type=int, default=10)
     a = ap.parse_args()
 
     if a.selftest:
@@ -830,14 +904,25 @@ def main():
         except AssertionError as e:
             print("SELFTEST FAILED: %s" % e)
             return 1
-    if not a.customers or not a.prospects:
-        ap.error("--customers and --prospects are required")
+    if not a.customers or not (a.prospects or a.discover_from):
+        ap.error("--customers and one of --prospects / --discover-from are required")
 
     started = utcnow()
     t0 = time.time()
     deadline = t0 + a.budget
     cust_rows, cust_ref = read_csv(a.customers, a.max_customers)
-    pros_rows, pros_ref = read_csv(a.prospects, a.max_prospects)
+    if a.discover_from:
+        found, dpage = discover(a.discover_from, a.discover_limit, a.out)
+        if dpage.get("net_fail"):
+            print('NO NETWORK: this run needs internet access. In Codex, click "Allow once" '
+                  'on the network prompt and re-run the same command.')
+            return 3
+        if not found:
+            print("DISCOVERY FOUND NOTHING on %s. Pass --prospects with a CSV instead." % a.discover_from)
+            return 2
+        pros_rows, pros_ref = read_csv(os.path.join(a.out, "discovered.csv"), a.max_prospects)
+    else:
+        pros_rows, pros_ref = read_csv(a.prospects, a.max_prospects)
 
     all_rows = [("customer", r) for r in cust_rows] + [("prospect", r) for r in pros_rows]
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
