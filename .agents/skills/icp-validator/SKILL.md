@@ -1,6 +1,6 @@
 ---
 name: icp-validator
-description: "Derives the actual ideal customer profile from what your existing customers' public websites show, scores every prospect against it with evidence URLs and retrieval dates, and drafts a Romanian opener for the top three. Use when the user asks what is our real ICP, validate our ICP, ICP fit, score these prospects, qualify this prospect list, which prospects match our customers, who should we contact first, or in Romanian care e ICP-ul nostru real, califica lista de prospecti."
+description: "Derives the actual ideal customer profile from what your existing customers' public websites show, scores every prospect against it with evidence URLs and retrieval dates, and drafts a first touch opener for the top three. Use when the user asks what is our real ICP, validate our ICP, ICP fit, score these prospects, qualify this prospect list, which prospects match our customers, who should we contact first, or draft openers for the best fit companies."
 ---
 
 # ICP validator
@@ -34,9 +34,9 @@ from the prompt, ask for it and stop.
    company name, then ` x `, then `offer_name`. Body, four short paragraphs: one of the
    `quote_candidates` quoted verbatim with its `evidence_url` and `retrieved_at`, one
    sentence on why that prompted writing, one sentence on the offer taken from
-   `offer_lines`, one small question. Mark each draft `DRAFT`. Use no dashes of any kind.
-   Skip AI tell phrases such as "in peisajul actual", "in era digitala", "sper ca acest
-   email va gaseste bine".
+   `offer_lines`, one small question. Write the drafts in English. Mark each `DRAFT`. Use no dashes of any
+   kind. Skip AI tell phrases such as "in today's fast paced landscape", "I hope this email
+   finds you well", "I wanted to reach out".
 6. Close with the five line ICP summary read from `out/icp-actual.md` (business line,
    Romania share, hiring share, size band, top tech), the count of prospects with fit 80
    or more, and the output paths. Keep the whole reply under 40 lines.

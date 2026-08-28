@@ -21,7 +21,7 @@ Say: "Every company writes an ICP in a slide. This one is computed from the cust
 1. Codex is open at the repository root.
 2. Paste [`demo/seed-prompt.md`](demo/seed-prompt.md).
 3. **Codex will ask to run a command that needs the network. Click "Allow once".** If the script prints `NO NETWORK`, it is asking for that approval: run it again after approving.
-4. Watch for: the ranked table printed in the terminal, then three files under `out/`.
+4. Watch for: the ranked table printed in the terminal first, within roughly 20 seconds, then three files under `out/`. The drafts are written after the table, so the result is on screen before the drafting finishes.
 5. If nothing visible after 60 seconds, open the fallback: [`demo/output/prospect-fit.md`](demo/output/prospect-fit.md).
 
 While it runs, say: "It is fetching 22 company websites right now, twelve customers and ten prospects, homepage plus the careers or about page for each. The collector takes about four seconds. Everything after that is the model writing the three drafts."
@@ -30,13 +30,13 @@ While it runs, say: "It is fetching 22 company websites right now, twelve custom
 
 Open `out/prospect-fit.md`. Point to the fit column, then to the evidence column, then to the "Insufficient evidence" section at the bottom.
 
-**Result:** the ICP is derived from 12 customer companies, 10 of which had usable public evidence, confidence `medium`. Three prospects score 80 or more: Omniconvert 84, UiPath 83, Axway 80. Four score under 30 and are marked unfit. `out/openers.md` holds one Romanian draft per top company, addressed to a role, never to a person.
+**Result:** the ICP is derived from 12 customer companies, 10 of which had usable public evidence, confidence `medium`. Three prospects score 80 or more: Omniconvert 84, UiPath 83, Axway 80. Four score under 30 and are marked unfit. `out/openers.md` holds one draft per top company, addressed to a role, never to a person.
 
 Say: "Apify's real customer base is SaaS products and martech, hiring, English language sites, mostly React and Google Tag Manager. Omniconvert scores 84 because it matches on business line, hiring and language, and it loses points on stack overlap. Every one of those numbers has a URL and a timestamp beside it."
 
 **Evidence:** every ranked row in `prospect-fit.md` carries the evidence URL and its `retrieved_at`. Prospects whose page could not be read are listed separately and never given a score.
 
-**Fallback output was produced:** 2026-08-28 at 19:22 EEST, by running this exact seed prompt in Codex from this repository.
+**Fallback output was produced:** 2026-08-28 at 19:31 EEST, by running this exact seed prompt in Codex CLI 0.150.1 from this repository, on a clean Codex profile with no personal configuration. Measured end to end: 80 seconds, of which the collector took 4 and the ranked table appeared first.
 
 ## Evals — 10 seconds
 

@@ -8,7 +8,7 @@
   "problem": "The Business Club lead at VIP (Voluntari pentru Idei si Proiecte, vipromania.ro) qualifies partner companies by eye from a hand-made spreadsheet; icp-validator derives VIP's actual ideal customer profile from the companies that already said yes and scores new prospects against it with sourced evidence.",
   "entry_skill": ".agents/skills/icp-validator/SKILL.md",
   "skills": [
-    { "path": ".agents/skills/icp-validator/SKILL.md", "role": "Derives the ICP from customers, scores prospects with evidence, and drafts Romanian openers for the top three." }
+    { "path": ".agents/skills/icp-validator/SKILL.md", "role": "Derives the ICP from customers, scores prospects with evidence, and drafts first touch openers for the top three." }
   ],
   "seed_prompt": "demo/seed-prompt.md",
   "input": "demo/input/prospects.csv",

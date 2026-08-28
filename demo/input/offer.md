@@ -1,12 +1,12 @@
-# Nume oferta: Apify
+# Offer name: Apify
 
-Apify se prezinta ca cea mai mare piata de instrumente de incredere pentru AI, construita pentru echipe care au nevoie de date web in timp real.
-Instrumentele se numesc Actors si ruleaza in cloud, fara ca echipa clientului sa intretina infrastructura de scraping.
-Cazurile de utilizare listate public acopera alimentarea modelelor AI, e commerce, dezvoltare de produs, automatizare, informatii despre competitie, social media, cercetare de piata si generare de leaduri.
-Planurile merg de la Free si abonamente self serve pana la un nivel Enterprise cu SSO, SLA si account manager dedicat.
-Pozitionarea pentru companii mari: date web corecte, sigure si conforme, de pe orice site, la orice scara.
-Segmentele numite pe site sunt startup uri, universitati, organizatii non profit si companii mari.
-Ce cerem intr o prima discutie: un caz concret in care echipa voastra copiaza date de pe web manual sau intretine un scraper propriu.
-Primul pas este o discutie scurta in care ne uitam la acel caz si vedem daca un Actor existent il rezolva.
+Apify describes itself as the largest marketplace of trusted tools for AI, built for teams that need real time web data.
+The tools are called Actors. They run in the cloud, so the customer's team does not maintain scraping infrastructure.
+The publicly listed use cases cover feeding AI models, e commerce, product development, automation, competitive intelligence, social media, market research and lead generation.
+Plans run from Free and self serve subscriptions up to an Enterprise tier with SSO, an SLA and a dedicated account manager.
+The enterprise positioning: accurate, reliable and compliant web data, from any website, at any scale.
+The customer segments named on the site are startups, universities, non profit organizations and large companies.
+What we ask for in a first conversation: one concrete case where your team copies data from the web by hand or maintains a scraper of its own.
+The first step is a short call where we look at that case and check whether an existing Actor already solves it.
 
-Surse: https://apify.com, https://apify.com/use-cases, https://apify.com/pricing, https://apify.com/enterprise, accesate 2026-08-28T16:07Z. Text parafrazat din paginile publice. Fara nume de persoane.
+Sources: https://apify.com, https://apify.com/use-cases, https://apify.com/pricing, https://apify.com/enterprise, retrieved 2026-08-28T16:07Z. Text paraphrased from the public pages. No person names.

@@ -26,6 +26,6 @@ Derived from 12 customer companies, 10 with sufficient public web evidence. Conf
 
 ## Limitations
 
-- Every trait above is read from the customers' own public websites, fetched at 2026-08-28T16:20:27Z. Nothing is inferred from private data.
+- Every trait above is read from the customers' own public websites, fetched at 2026-08-28T16:31:17Z. Nothing is inferred from private data.
 - Revenue, deal size, sales cycle and retention appear only if those columns exist in the customers file. `not in input` means the CRM did not provide them.
 - Employee counts are only counted when a site states them in text; `not observed` means no site did.
