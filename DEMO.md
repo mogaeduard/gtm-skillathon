@@ -38,7 +38,7 @@ Say: "Apify's real customer base is SaaS products and martech, hiring, English l
 
 **Evidence:** every ranked row in `prospect-fit.md` carries the evidence URL and its `retrieved_at`. Prospects whose page could not be read are listed separately and never given a score.
 
-**Fallback output was produced:** 2026-08-28 at 20:09 EEST, by running this exact seed prompt in Codex CLI 0.150.1 from a fresh `git clone` of the submitted commit, on a clean Codex profile holding nothing but the login. Measured end to end: 68 seconds, of which the collector took 4 and the ranked table appeared first. Four clean profile runs of this prompt tonight took 80, 115, 86 and 68 seconds; all of the variation is model writing time, and the table was on screen within the first 20 seconds in every one.
+**Fallback output was produced:** 2026-08-28 at 20:09 EEST, by running this exact seed prompt in Codex CLI 0.150.1 from a fresh `git clone` of the submitted commit, on a clean Codex profile holding nothing but the login. Measured end to end: 68 seconds, of which the collector took 4 and the ranked table appeared first. Five clean profile runs of this prompt tonight took 80, 115, 86, 68 and 74 seconds, median 80; all of the variation is model writing time, and the ranked table was on screen within the first 20 seconds in every one. The last one, at 20:18, reproduced every number in this run sheet.
 
 ## Evals — 10 seconds
 
