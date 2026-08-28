@@ -692,6 +692,12 @@ def selftest():
     for k in ("industry", "country", "employees", "revenue", "retention", "sales_cycle"):
         assert i3["crm"][k] == "not in input", (k, i3["crm"][k])
 
+    assert pick_quotes("Install now Limited founding brand places. We help ecommerce teams "
+                       "understand why customers churn and what to do about it.") == \
+        ["We help ecommerce teams understand why customers churn and what to do about it."], \
+        "pick_quotes must drop CTA fragments and keep the real sentence"
+    assert pick_quotes("Accept All Cookies Manage Preferences Privacy Policy Settings Here.") == [], \
+        "pick_quotes must return nothing rather than a cookie banner"
     print("SELFTEST OK")
     return 0
 
@@ -778,6 +784,33 @@ def discover(list_url, limit, outdir):
           % (len(rows), page.get("final_url") or list_url, page.get("retrieved_at"), path))
     return rows, page
 
+# Cookie banners, CTAs and nav crumbs read like sentences but say nothing about the
+# company. A draft that quotes one looks automated, so they never reach the model.
+QUOTE_JUNK_RE = re.compile(
+    r"cookie|consent|privacy|newsletter|subscribe|sign up|log in|install now|get started|"
+    r"free trial|book a demo|contact us|learn more|read more|click here|limited|places left|"
+    r"all rights reserved|terms of|©|menu|skip to", re.I)
+
+def pick_quotes(excerpt, meta_description=None, k=3):
+    """-> up to k sentences a human would accept as the company's own words."""
+    out, seen = [], set()
+    for src in (meta_description or "", excerpt or ""):
+        for q in re.split(r"(?<=[.!?])\s+", src):
+            q = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", q)).strip()
+            if not (40 <= len(q) <= 180) or len(q.split()) < 6:
+                continue
+            if QUOTE_JUNK_RE.search(q) or q.lower() in seen:
+                continue
+            # a real sentence has lowercase words; a nav strip is Title Case Everywhere
+            words = [w for w in q.split() if w.isalpha()]
+            if words and sum(1 for w in words if w[0].islower()) < 2:
+                continue
+            seen.add(q.lower())
+            out.append(q)
+            if len(out) == k:
+                return out
+    return out
+
 def write_openers_input(icp, ranked, companies_by_domain, offer_path, outdir):
     """Slim file so the drafting step never has to read the big JSON."""
     offer_name, offer_lines = "the offer", []
@@ -796,7 +829,7 @@ def write_openers_input(icp, ranked, companies_by_domain, offer_path, outdir):
             continue
         c = companies_by_domain.get(r["domain"]) or {}
         excerpt = c.get("text_excerpt") or ""
-        quotes = [q.strip() for q in re.split(r"(?<=[.!?])\s+", excerpt) if 40 <= len(q.strip()) <= 180][:3]
+        quotes = pick_quotes(excerpt, (c.get("pages") or [{}])[0].get("meta_description"))
         te = r.get("top_evidence") or {}
         top.append({"company": r["company"], "domain": r["domain"], "fit": r["fit"],
                     "evidence_url": te.get("url"), "retrieved_at": te.get("retrieved_at"),

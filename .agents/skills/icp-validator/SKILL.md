@@ -41,8 +41,11 @@ only feed the CRM block. If the customers file or the offer is missing, ask and 
    company name, then ` x `, then `offer_name`. Body, four short paragraphs: one of the
    `quote_candidates` quoted verbatim with its `evidence_url` and `retrieved_at`, one
    sentence on why that prompted writing, one sentence on the offer taken from
-   `offer_lines`, one small question. Write the drafts in English. Mark each `DRAFT`. Use no dashes of any
-   kind. Skip AI tell phrases such as "in today's fast paced landscape", "I hope this email
+   `offer_lines`, one small question. Write the drafts in English, plain text, no HTML tags.
+   Name nothing about the company that is not in the quote, the title or the signals: no
+   product names, no customer names, no numbers you did not read. Mark each `DRAFT`. Use no dashes of any
+   kind: if a quote candidate contains one, quote a different candidate rather than
+   editing the company's own words. Skip AI tell phrases such as "in today's fast paced landscape", "I hope this email
    finds you well", "I wanted to reach out".
 6. Close with the five line ICP summary read from `out/icp-actual.md` (business line,
    Romania share, hiring share, size band, top tech), the count of prospects with fit 80
