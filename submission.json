@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "team": {
+    "name": "TODO team name",
+    "members": ["TODO member 1"]
+  },
+  "track": "TODO one of: ai-search-optimization | personalized-growth-engines | churn-detection | synthetic-buyer-simulations | plg-automation | multi-agent-orchestration | custom",
+  "problem": "TODO one sentence: who has what GTM problem and what the skill produces",
+  "entry_skill": ".agents/skills/TODO-skill-name/SKILL.md",
+  "skills": [
+    { "path": ".agents/skills/TODO-skill-name/SKILL.md", "role": "TODO the one job this skill owns" }
+  ],
+  "seed_prompt": "demo/seed-prompt.md",
+  "input": "demo/input/TODO-file",
+  "output": "demo/output/TODO-file",
+  "evals": "demo/evals.md",
+  "run_sheet": "DEMO.md"
+}
