@@ -1,0 +1,674 @@
+{
+  "icp": {
+    "n_customers": 2,
+    "n_with_evidence": 2,
+    "icp_confidence": "insufficient (n<5 with evidence)",
+    "derived_from": "all_customers",
+    "good_customers": "not in input",
+    "category_share": {
+      "saas_product": 0.5,
+      "cybersecurity": 0.5
+    },
+    "top_tags": [
+      "saas_product",
+      "cybersecurity"
+    ],
+    "share_romania": 0.5,
+    "share_hiring": 1.0,
+    "size_band_share": {},
+    "modal_size_band": null,
+    "tech_share": {
+      "gtm": 1.0,
+      "cloudflare": 0.5,
+      "hubspot": 0.5,
+      "react": 0.5
+    },
+    "tech_union": [
+      "cloudflare",
+      "gtm",
+      "hubspot",
+      "react"
+    ],
+    "language_share": {
+      "en": 1.0,
+      "de": 0.5,
+      "de-at": 0.5,
+      "de-ch": 0.5,
+      "de-de": 0.5,
+      "en-ae": 0.5,
+      "en-au": 0.5,
+      "en-bg": 0.5,
+      "en-bz": 0.5,
+      "en-ca": 0.5,
+      "en-cz": 0.5,
+      "en-dk": 0.5,
+      "en-gb": 0.5,
+      "en-hu": 0.5,
+      "en-id": 0.5,
+      "en-il": 0.5,
+      "en-in": 0.5,
+      "en-jm": 0.5,
+      "en-kr": 0.5,
+      "en-lv": 0.5,
+      "en-mt": 0.5,
+      "en-my": 0.5,
+      "en-no": 0.5,
+      "en-nz": 0.5,
+      "en-ph": 0.5,
+      "en-pl": 0.5,
+      "en-ro": 0.5,
+      "en-sa": 0.5,
+      "en-sg": 0.5,
+      "en-sv": 0.5,
+      "en-th": 0.5,
+      "en-us": 0.5,
+      "en-za": 0.5,
+      "es": 0.5,
+      "es-cl": 0.5,
+      "es-co": 0.5,
+      "es-es": 0.5,
+      "es-mx": 0.5,
+      "es-pe": 0.5,
+      "fr-be": 0.5,
+      "fr-fr": 0.5,
+      "it": 0.5,
+      "it-it": 0.5,
+      "nl": 0.5,
+      "nl-be": 0.5,
+      "nl-nl": 0.5,
+      "pt": 0.5,
+      "pt-br": 0.5,
+      "pt-pt": 0.5,
+      "ro": 0.5,
+      "ro-ro": 0.5,
+      "sv": 0.5,
+      "sv-se": 0.5,
+      "x-default": 0.5,
+      "zh-hk": 0.5,
+      "zh-tw": 0.5
+    },
+    "majority_languages": [
+      "en",
+      "de",
+      "de-at",
+      "de-ch",
+      "de-de",
+      "en-ae",
+      "en-au",
+      "en-bg",
+      "en-bz",
+      "en-ca",
+      "en-cz",
+      "en-dk",
+      "en-gb",
+      "en-hu",
+      "en-id",
+      "en-il",
+      "en-in",
+      "en-jm",
+      "en-kr",
+      "en-lv",
+      "en-mt",
+      "en-my",
+      "en-no",
+      "en-nz",
+      "en-ph",
+      "en-pl",
+      "en-ro",
+      "en-sa",
+      "en-sg",
+      "en-sv",
+      "en-th",
+      "en-us",
+      "en-za",
+      "es",
+      "es-cl",
+      "es-co",
+      "es-es",
+      "es-mx",
+      "es-pe",
+      "fr-be",
+      "fr-fr",
+      "it",
+      "it-it",
+      "nl",
+      "nl-be",
+      "nl-nl",
+      "pt",
+      "pt-br",
+      "pt-pt",
+      "ro",
+      "ro-ro",
+      "sv",
+      "sv-se",
+      "x-default",
+      "zh-hk",
+      "zh-tw"
+    ],
+    "majority_romania": true,
+    "majority_hiring": true,
+    "crm": {
+      "win_rate": "not in input",
+      "deal_size": "not in input",
+      "days_to_close": "not in input",
+      "sales_cycle": "not in input",
+      "retention": "not in input",
+      "revenue": "not in input",
+      "industry": "not in input",
+      "country": "not in input",
+      "employees": "not in input"
+    }
+  },
+  "prospects": [
+    {
+      "company": "HyperSense Software",
+      "domain": "hypersense-software.com",
+      "fit": 84,
+      "verdict": "fit",
+      "components": [
+        {
+          "name": "category",
+          "points": 40,
+          "max": 40,
+          "because": "top tag 'saas_product' is a customer top-2 tag"
+        },
+        {
+          "name": "location",
+          "points": 15,
+          "max": 15,
+          "because": "romania=True vs customer majority True"
+        },
+        {
+          "name": "hiring",
+          "points": 15,
+          "max": 15,
+          "because": "hiring=True (job_keyword_hits=14) vs customer majority True"
+        },
+        {
+          "name": "tech",
+          "points": 4,
+          "max": 10,
+          "because": "tech overlap ['gtm', 'hubspot', 'react'] (jaccard 0.38)"
+        },
+        {
+          "name": "size",
+          "points": 0,
+          "max": 10,
+          "because": "band 11-50 vs customer modal band None"
+        },
+        {
+          "name": "language",
+          "points": 10,
+          "max": 10,
+          "because": "languages ['en'] vs customer majority ['de', 'de-at', 'de-ch', 'de-de', 'en', 'en-ae', 'en-au', 'en-bg', 'en-bz', 'en-ca', 'en-cz', 'en-dk', 'en-gb', 'en-hu', 'en-id', 'en-il', 'en-in', 'en-jm', 'en-kr', 'en-lv', 'en-mt', 'en-my', 'en-no', 'en-nz', 'en-ph', 'en-pl', 'en-ro', 'en-sa', 'en-sg', 'en-sv', 'en-th', 'en-us', 'en-za', 'es', 'es-cl', 'es-co', 'es-es', 'es-mx', 'es-pe', 'fr-be', 'fr-fr', 'it', 'it-it', 'nl', 'nl-be', 'nl-nl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ro-ro', 'sv', 'sv-se', 'x-default', 'zh-hk', 'zh-tw']"
+        }
+      ],
+      "top_evidence": {
+        "url": "https://hypersense-software.com",
+        "retrieved_at": "2026-08-28T16:20:16Z"
+      },
+      "insufficient_evidence": false,
+      "error": null,
+      "fit_confidence": "low (ICP derived from n<5)"
+    },
+    {
+      "company": "Zitec",
+      "domain": "zitec.com",
+      "fit": 84,
+      "verdict": "fit",
+      "components": [
+        {
+          "name": "category",
+          "points": 40,
+          "max": 40,
+          "because": "top tag 'saas_product' is a customer top-2 tag"
+        },
+        {
+          "name": "location",
+          "points": 15,
+          "max": 15,
+          "because": "romania=True vs customer majority True"
+        },
+        {
+          "name": "hiring",
+          "points": 15,
+          "max": 15,
+          "because": "hiring=True (job_keyword_hits=2) vs customer majority True"
+        },
+        {
+          "name": "tech",
+          "points": 4,
+          "max": 10,
+          "because": "tech overlap ['gtm', 'hubspot'] (jaccard 0.40)"
+        },
+        {
+          "name": "size",
+          "points": 0,
+          "max": 10,
+          "because": "band None vs customer modal band None"
+        },
+        {
+          "name": "language",
+          "points": 10,
+          "max": 10,
+          "because": "languages ['en'] vs customer majority ['de', 'de-at', 'de-ch', 'de-de', 'en', 'en-ae', 'en-au', 'en-bg', 'en-bz', 'en-ca', 'en-cz', 'en-dk', 'en-gb', 'en-hu', 'en-id', 'en-il', 'en-in', 'en-jm', 'en-kr', 'en-lv', 'en-mt', 'en-my', 'en-no', 'en-nz', 'en-ph', 'en-pl', 'en-ro', 'en-sa', 'en-sg', 'en-sv', 'en-th', 'en-us', 'en-za', 'es', 'es-cl', 'es-co', 'es-es', 'es-mx', 'es-pe', 'fr-be', 'fr-fr', 'it', 'it-it', 'nl', 'nl-be', 'nl-nl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ro-ro', 'sv', 'sv-se', 'x-default', 'zh-hk', 'zh-tw']"
+        }
+      ],
+      "top_evidence": {
+        "url": "https://zitec.com",
+        "retrieved_at": "2026-08-28T16:20:16Z"
+      },
+      "insufficient_evidence": false,
+      "error": null,
+      "fit_confidence": "low (ICP derived from n<5)"
+    },
+    {
+      "company": "UiPath Bucharest",
+      "domain": "uipath.com",
+      "fit": 75,
+      "verdict": "maybe",
+      "components": [
+        {
+          "name": "category",
+          "points": 40,
+          "max": 40,
+          "because": "top tag 'saas_product' is a customer top-2 tag"
+        },
+        {
+          "name": "location",
+          "points": 0,
+          "max": 15,
+          "because": "romania=False vs customer majority True"
+        },
+        {
+          "name": "hiring",
+          "points": 15,
+          "max": 15,
+          "because": "hiring=True (job_keyword_hits=4) vs customer majority True"
+        },
+        {
+          "name": "tech",
+          "points": 10,
+          "max": 10,
+          "because": "tech overlap ['cloudflare', 'gtm', 'hubspot', 'react'] (jaccard 1.00)"
+        },
+        {
+          "name": "size",
+          "points": 0,
+          "max": 10,
+          "because": "band None vs customer modal band None"
+        },
+        {
+          "name": "language",
+          "points": 10,
+          "max": 10,
+          "because": "languages ['en'] vs customer majority ['de', 'de-at', 'de-ch', 'de-de', 'en', 'en-ae', 'en-au', 'en-bg', 'en-bz', 'en-ca', 'en-cz', 'en-dk', 'en-gb', 'en-hu', 'en-id', 'en-il', 'en-in', 'en-jm', 'en-kr', 'en-lv', 'en-mt', 'en-my', 'en-no', 'en-nz', 'en-ph', 'en-pl', 'en-ro', 'en-sa', 'en-sg', 'en-sv', 'en-th', 'en-us', 'en-za', 'es', 'es-cl', 'es-co', 'es-es', 'es-mx', 'es-pe', 'fr-be', 'fr-fr', 'it', 'it-it', 'nl', 'nl-be', 'nl-nl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ro-ro', 'sv', 'sv-se', 'x-default', 'zh-hk', 'zh-tw']"
+        }
+      ],
+      "top_evidence": {
+        "url": "https://www.uipath.com/",
+        "retrieved_at": "2026-08-28T16:20:16Z"
+      },
+      "insufficient_evidence": false,
+      "error": null,
+      "fit_confidence": "low (ICP derived from n<5)"
+    },
+    {
+      "company": "Axway România",
+      "domain": "axway.com",
+      "fit": 65,
+      "verdict": "maybe",
+      "components": [
+        {
+          "name": "category",
+          "points": 40,
+          "max": 40,
+          "because": "top tag 'saas_product' is a customer top-2 tag"
+        },
+        {
+          "name": "location",
+          "points": 0,
+          "max": 15,
+          "because": "romania=False vs customer majority True"
+        },
+        {
+          "name": "hiring",
+          "points": 15,
+          "max": 15,
+          "because": "hiring=True (job_keyword_hits=1) vs customer majority True"
+        },
+        {
+          "name": "tech",
+          "points": 0,
+          "max": 10,
+          "because": "tech overlap none (jaccard 0.00)"
+        },
+        {
+          "name": "size",
+          "points": 0,
+          "max": 10,
+          "because": "band None vs customer modal band None"
+        },
+        {
+          "name": "language",
+          "points": 10,
+          "max": 10,
+          "because": "languages ['de', 'en', 'fr', 'pt-br', 'x-default'] vs customer majority ['de', 'de-at', 'de-ch', 'de-de', 'en', 'en-ae', 'en-au', 'en-bg', 'en-bz', 'en-ca', 'en-cz', 'en-dk', 'en-gb', 'en-hu', 'en-id', 'en-il', 'en-in', 'en-jm', 'en-kr', 'en-lv', 'en-mt', 'en-my', 'en-no', 'en-nz', 'en-ph', 'en-pl', 'en-ro', 'en-sa', 'en-sg', 'en-sv', 'en-th', 'en-us', 'en-za', 'es', 'es-cl', 'es-co', 'es-es', 'es-mx', 'es-pe', 'fr-be', 'fr-fr', 'it', 'it-it', 'nl', 'nl-be', 'nl-nl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ro-ro', 'sv', 'sv-se', 'x-default', 'zh-hk', 'zh-tw']"
+        }
+      ],
+      "top_evidence": {
+        "url": "https://www.axway.com/en",
+        "retrieved_at": "2026-08-28T16:20:16Z"
+      },
+      "insufficient_evidence": false,
+      "error": null,
+      "fit_confidence": "low (ICP derived from n<5)"
+    },
+    {
+      "company": "Plant an App Romania",
+      "domain": "plantanapp.com",
+      "fit": 52,
+      "verdict": "maybe",
+      "components": [
+        {
+          "name": "category",
+          "points": 40,
+          "max": 40,
+          "because": "top tag 'saas_product' is a customer top-2 tag"
+        },
+        {
+          "name": "location",
+          "points": 0,
+          "max": 15,
+          "because": "romania=False vs customer majority True"
+        },
+        {
+          "name": "hiring",
+          "points": 0,
+          "max": 15,
+          "because": "hiring=False (job_keyword_hits=0) vs customer majority True"
+        },
+        {
+          "name": "tech",
+          "points": 2,
+          "max": 10,
+          "because": "tech overlap ['gtm'] (jaccard 0.17)"
+        },
+        {
+          "name": "size",
+          "points": 0,
+          "max": 10,
+          "because": "band None vs customer modal band None"
+        },
+        {
+          "name": "language",
+          "points": 10,
+          "max": 10,
+          "because": "languages ['en-us'] vs customer majority ['de', 'de-at', 'de-ch', 'de-de', 'en', 'en-ae', 'en-au', 'en-bg', 'en-bz', 'en-ca', 'en-cz', 'en-dk', 'en-gb', 'en-hu', 'en-id', 'en-il', 'en-in', 'en-jm', 'en-kr', 'en-lv', 'en-mt', 'en-my', 'en-no', 'en-nz', 'en-ph', 'en-pl', 'en-ro', 'en-sa', 'en-sg', 'en-sv', 'en-th', 'en-us', 'en-za', 'es', 'es-cl', 'es-co', 'es-es', 'es-mx', 'es-pe', 'fr-be', 'fr-fr', 'it', 'it-it', 'nl', 'nl-be', 'nl-nl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ro-ro', 'sv', 'sv-se', 'x-default', 'zh-hk', 'zh-tw']"
+        }
+      ],
+      "top_evidence": {
+        "url": "https://www.plantanapp.com:443/",
+        "retrieved_at": "2026-08-28T16:20:16Z"
+      },
+      "insufficient_evidence": false,
+      "error": null,
+      "fit_confidence": "low (ICP derived from n<5)"
+    },
+    {
+      "company": "mindit.io",
+      "domain": "mindit.io",
+      "fit": 44,
+      "verdict": "unfit",
+      "components": [
+        {
+          "name": "category",
+          "points": 0,
+          "max": 40,
+          "because": "top tag 'fintech' not in customer mix"
+        },
+        {
+          "name": "location",
+          "points": 15,
+          "max": 15,
+          "because": "romania=True vs customer majority True"
+        },
+        {
+          "name": "hiring",
+          "points": 15,
+          "max": 15,
+          "because": "hiring=True (job_keyword_hits=20) vs customer majority True"
+        },
+        {
+          "name": "tech",
+          "points": 4,
+          "max": 10,
+          "because": "tech overlap ['gtm', 'hubspot'] (jaccard 0.40)"
+        },
+        {
+          "name": "size",
+          "points": 0,
+          "max": 10,
+          "because": "band 1-10 vs customer modal band None"
+        },
+        {
+          "name": "language",
+          "points": 10,
+          "max": 10,
+          "because": "languages ['de', 'en', 'en-us', 'x-default'] vs customer majority ['de', 'de-at', 'de-ch', 'de-de', 'en', 'en-ae', 'en-au', 'en-bg', 'en-bz', 'en-ca', 'en-cz', 'en-dk', 'en-gb', 'en-hu', 'en-id', 'en-il', 'en-in', 'en-jm', 'en-kr', 'en-lv', 'en-mt', 'en-my', 'en-no', 'en-nz', 'en-ph', 'en-pl', 'en-ro', 'en-sa', 'en-sg', 'en-sv', 'en-th', 'en-us', 'en-za', 'es', 'es-cl', 'es-co', 'es-es', 'es-mx', 'es-pe', 'fr-be', 'fr-fr', 'it', 'it-it', 'nl', 'nl-be', 'nl-nl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ro-ro', 'sv', 'sv-se', 'x-default', 'zh-hk', 'zh-tw']"
+        }
+      ],
+      "top_evidence": {
+        "url": "https://mindit.io",
+        "retrieved_at": "2026-08-28T16:20:16Z"
+      },
+      "insufficient_evidence": false,
+      "error": null,
+      "fit_confidence": "low (ICP derived from n<5)"
+    },
+    {
+      "company": "ThemeIsle",
+      "domain": "themeisle.com",
+      "fit": 40,
+      "verdict": "unfit",
+      "components": [
+        {
+          "name": "category",
+          "points": 0,
+          "max": 40,
+          "because": "top tag 'education' not in customer mix"
+        },
+        {
+          "name": "location",
+          "points": 15,
+          "max": 15,
+          "because": "romania=True vs customer majority True"
+        },
+        {
+          "name": "hiring",
+          "points": 15,
+          "max": 15,
+          "because": "hiring=True (job_keyword_hits=3) vs customer majority True"
+        },
+        {
+          "name": "tech",
+          "points": 0,
+          "max": 10,
+          "because": "tech overlap none (jaccard 0.00)"
+        },
+        {
+          "name": "size",
+          "points": 0,
+          "max": 10,
+          "because": "band None vs customer modal band None"
+        },
+        {
+          "name": "language",
+          "points": 10,
+          "max": 10,
+          "because": "languages ['en-us'] vs customer majority ['de', 'de-at', 'de-ch', 'de-de', 'en', 'en-ae', 'en-au', 'en-bg', 'en-bz', 'en-ca', 'en-cz', 'en-dk', 'en-gb', 'en-hu', 'en-id', 'en-il', 'en-in', 'en-jm', 'en-kr', 'en-lv', 'en-mt', 'en-my', 'en-no', 'en-nz', 'en-ph', 'en-pl', 'en-ro', 'en-sa', 'en-sg', 'en-sv', 'en-th', 'en-us', 'en-za', 'es', 'es-cl', 'es-co', 'es-es', 'es-mx', 'es-pe', 'fr-be', 'fr-fr', 'it', 'it-it', 'nl', 'nl-be', 'nl-nl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ro-ro', 'sv', 'sv-se', 'x-default', 'zh-hk', 'zh-tw']"
+        }
+      ],
+      "top_evidence": {
+        "url": "https://themeisle.com",
+        "retrieved_at": "2026-08-28T16:20:16Z"
+      },
+      "insufficient_evidence": false,
+      "error": null,
+      "fit_confidence": "low (ICP derived from n<5)"
+    },
+    {
+      "company": "Omniconvert",
+      "domain": "omniconvert.com",
+      "fit": 30,
+      "verdict": "unfit",
+      "components": [
+        {
+          "name": "category",
+          "points": 0,
+          "max": 40,
+          "because": "top tag 'martech' not in customer mix"
+        },
+        {
+          "name": "location",
+          "points": 0,
+          "max": 15,
+          "because": "romania=False vs customer majority True"
+        },
+        {
+          "name": "hiring",
+          "points": 15,
+          "max": 15,
+          "because": "hiring=True (job_keyword_hits=69) vs customer majority True"
+        },
+        {
+          "name": "tech",
+          "points": 5,
+          "max": 10,
+          "because": "tech overlap ['gtm', 'hubspot', 'react'] (jaccard 0.50)"
+        },
+        {
+          "name": "size",
+          "points": 0,
+          "max": 10,
+          "because": "band None vs customer modal band None"
+        },
+        {
+          "name": "language",
+          "points": 10,
+          "max": 10,
+          "because": "languages ['en'] vs customer majority ['de', 'de-at', 'de-ch', 'de-de', 'en', 'en-ae', 'en-au', 'en-bg', 'en-bz', 'en-ca', 'en-cz', 'en-dk', 'en-gb', 'en-hu', 'en-id', 'en-il', 'en-in', 'en-jm', 'en-kr', 'en-lv', 'en-mt', 'en-my', 'en-no', 'en-nz', 'en-ph', 'en-pl', 'en-ro', 'en-sa', 'en-sg', 'en-sv', 'en-th', 'en-us', 'en-za', 'es', 'es-cl', 'es-co', 'es-es', 'es-mx', 'es-pe', 'fr-be', 'fr-fr', 'it', 'it-it', 'nl', 'nl-be', 'nl-nl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ro-ro', 'sv', 'sv-se', 'x-default', 'zh-hk', 'zh-tw']"
+        }
+      ],
+      "top_evidence": {
+        "url": "https://www.omniconvert.com/",
+        "retrieved_at": "2026-08-28T16:20:16Z"
+      },
+      "insufficient_evidence": false,
+      "error": null,
+      "fit_confidence": "low (ICP derived from n<5)"
+    },
+    {
+      "company": "Romanian Software",
+      "domain": "sdworx.ro",
+      "fit": 25,
+      "verdict": "unfit",
+      "components": [
+        {
+          "name": "category",
+          "points": 0,
+          "max": 40,
+          "because": "top tag 'hr_payroll' not in customer mix"
+        },
+        {
+          "name": "location",
+          "points": 15,
+          "max": 15,
+          "because": "romania=True vs customer majority True"
+        },
+        {
+          "name": "hiring",
+          "points": 0,
+          "max": 15,
+          "because": "hiring=False (job_keyword_hits=0) vs customer majority True"
+        },
+        {
+          "name": "tech",
+          "points": 0,
+          "max": 10,
+          "because": "tech overlap none (jaccard 0.00)"
+        },
+        {
+          "name": "size",
+          "points": 0,
+          "max": 10,
+          "because": "band None vs customer modal band None"
+        },
+        {
+          "name": "language",
+          "points": 10,
+          "max": 10,
+          "because": "languages ['ro-ro'] vs customer majority ['de', 'de-at', 'de-ch', 'de-de', 'en', 'en-ae', 'en-au', 'en-bg', 'en-bz', 'en-ca', 'en-cz', 'en-dk', 'en-gb', 'en-hu', 'en-id', 'en-il', 'en-in', 'en-jm', 'en-kr', 'en-lv', 'en-mt', 'en-my', 'en-no', 'en-nz', 'en-ph', 'en-pl', 'en-ro', 'en-sa', 'en-sg', 'en-sv', 'en-th', 'en-us', 'en-za', 'es', 'es-cl', 'es-co', 'es-es', 'es-mx', 'es-pe', 'fr-be', 'fr-fr', 'it', 'it-it', 'nl', 'nl-be', 'nl-nl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ro-ro', 'sv', 'sv-se', 'x-default', 'zh-hk', 'zh-tw']"
+        }
+      ],
+      "top_evidence": {
+        "url": "https://www.sdworx.ro/ro-ro",
+        "retrieved_at": "2026-08-28T16:20:16Z"
+      },
+      "insufficient_evidence": false,
+      "error": null,
+      "fit_confidence": "low (ICP derived from n<5)"
+    },
+    {
+      "company": "EveryMatrix Bucuresti",
+      "domain": "everymatrix.com",
+      "fit": 12,
+      "verdict": "unfit",
+      "components": [
+        {
+          "name": "category",
+          "points": 0,
+          "max": 40,
+          "because": "top tag 'igaming' not in customer mix"
+        },
+        {
+          "name": "location",
+          "points": 0,
+          "max": 15,
+          "because": "romania=False vs customer majority True"
+        },
+        {
+          "name": "hiring",
+          "points": 0,
+          "max": 15,
+          "because": "hiring=False (job_keyword_hits=0) vs customer majority True"
+        },
+        {
+          "name": "tech",
+          "points": 2,
+          "max": 10,
+          "because": "tech overlap ['gtm'] (jaccard 0.20)"
+        },
+        {
+          "name": "size",
+          "points": 0,
+          "max": 10,
+          "because": "band None vs customer modal band None"
+        },
+        {
+          "name": "language",
+          "points": 10,
+          "max": 10,
+          "because": "languages ['en', 'en-gb', 'es', 'pt', 'x-default'] vs customer majority ['de', 'de-at', 'de-ch', 'de-de', 'en', 'en-ae', 'en-au', 'en-bg', 'en-bz', 'en-ca', 'en-cz', 'en-dk', 'en-gb', 'en-hu', 'en-id', 'en-il', 'en-in', 'en-jm', 'en-kr', 'en-lv', 'en-mt', 'en-my', 'en-no', 'en-nz', 'en-ph', 'en-pl', 'en-ro', 'en-sa', 'en-sg', 'en-sv', 'en-th', 'en-us', 'en-za', 'es', 'es-cl', 'es-co', 'es-es', 'es-mx', 'es-pe', 'fr-be', 'fr-fr', 'it', 'it-it', 'nl', 'nl-be', 'nl-nl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ro-ro', 'sv', 'sv-se', 'x-default', 'zh-hk', 'zh-tw']"
+        }
+      ],
+      "top_evidence": {
+        "url": "https://everymatrix.com",
+        "retrieved_at": "2026-08-28T16:20:16Z"
+      },
+      "insufficient_evidence": false,
+      "error": null,
+      "fit_confidence": "low (ICP derived from n<5)"
+    }
+  ]
+}

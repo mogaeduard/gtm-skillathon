@@ -1,0 +1,976 @@
+{
+  "meta": {
+    "started": "2026-08-28T16:20:16Z",
+    "finished": "2026-08-28T16:20:20Z",
+    "budget_s": 20.0,
+    "version": "1.0",
+    "python": "3.14.6",
+    "elapsed_s": 3.17,
+    "input_sources": {
+      "customers": "demo/input/evals/customers-two.csv",
+      "prospects": "demo/input/prospects.csv"
+    }
+  },
+  "customers": [
+    {
+      "company": "UiPath",
+      "domain": "uipath.com",
+      "pages": [
+        {
+          "url": "https://uipath.com",
+          "final_url": "https://www.uipath.com/",
+          "http_status": 200,
+          "bytes": 727652,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 516,
+          "error": null
+        },
+        {
+          "url": "https://www.uipath.com/careers",
+          "final_url": "https://www.uipath.com/careers",
+          "http_status": 200,
+          "bytes": 501371,
+          "retrieved_at": "2026-08-28T16:20:17Z",
+          "elapsed_ms": 285,
+          "error": null
+        }
+      ],
+      "title": "The UiPath Platform™ for Business Orchestration and Automation | UiPath",
+      "meta_description": "Transform enterprise operations with the UiPath Platform™ for business orchestration and automation, enabling AI agents, robots, and people to deliver secure, compliant outcomes at scale.",
+      "lang": "en",
+      "h1": [
+        "Your clear path to AI results"
+      ],
+      "h2": [
+        "See the path in action",
+        "One platform. Three layers. Every outcome traceable.",
+        "UiPath Solutions for industries and departments",
+        "Proven outcomes across every industry",
+        "Build with what you know",
+        "Testing that runs itself",
+        "Ready to start?"
+      ],
+      "text_excerpt": "The UiPath Platform™ for Business Orchestration and Automation | UiPath FUSION is coming. FUSION is coming. days hours minutes Register now Your clear path to AI results Break through enterprise complexity with one platform for business orchestration and automation. Built for your business. Connected across your systems. Trusted to deliver measurable AI results. See how Start free UiPath Careers - Shape the Future of Agentic Automation & AI | UiPath FUSION is coming. FUSION is coming. days hours minutes Register now Careers UIPATH CAREERS Agents think. Robots do. People lead. Explore careers at UiPath. Search jobs Who we are Our world is in perpetual motion, and so is UiPath. We constantly renew, rethink, reinvent to create something better. We move to improve. ​UiPath is a place where curious minds come together to help others work better. Where we learn from our mistakes. And where new ways of thinking build the path to a better world. Let’s build that path together. Game-changers United purpose Failing forward Flexibility We're humble game-changers We do big things, but we approach our work with humility. Because at UiPath, we’re doing something profound: we’re making work itself more meaningful. We’re helping people do more, learn more, and have more fulfilling careers. But we know none of this is easy, and we don’t have all the answers. So, we attract people who never stop asking questions. We’re united by an ambitious purpose Accelerating human achievement by shaping th",
+      "text_chars": 4408,
+      "signals": {
+        "hiring": {
+          "careers_page_found": true,
+          "job_keyword_hits": 4
+        },
+        "tech": [
+          "cloudflare",
+          "gtm",
+          "hubspot",
+          "react"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {
+          "saas_product": 10,
+          "martech": 1,
+          "nonprofit_community": 6
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Bitdefender",
+      "domain": "bitdefender.com",
+      "pages": [
+        {
+          "url": "https://bitdefender.com",
+          "final_url": "https://www.bitdefender.com/ro-ro/",
+          "http_status": 200,
+          "bytes": 242910,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 499,
+          "error": null
+        },
+        {
+          "url": "https://www.bitdefender.com/ro-ro/company/careers",
+          "final_url": "https://www.bitdefender.com/ro-ro/company/careers",
+          "http_status": 200,
+          "bytes": 138481,
+          "retrieved_at": "2026-08-28T16:20:17Z",
+          "elapsed_ms": 383,
+          "error": null
+        }
+      ],
+      "title": "Bitdefender - Lider global software de securitate cibernetică",
+      "meta_description": "Bitdefender este lider mondial în securitate cibernetică, oferind cea mai bună protecție împotriva tuturor amenințărilor informatice.",
+      "lang": "ro",
+      "h1": [
+        "Bitdefender este lider global în securitate cibernetică",
+        "Bitdefender este lider global în securitate cibernetică"
+      ],
+      "h2": [
+        "Recunoaștere în industrie",
+        "Sunteți deja client?",
+        "Faceți pasul următor",
+        "Citiți cele mai recente informații despre securitate cibernetică:",
+        "Trusted. Always."
+      ],
+      "text_excerpt": "Bitdefender - Lider global software de securitate cibernetică Placeholder Bitdefender este lider global în securitate cibernetică Protejează milioane de utilizatori individuali și companii încă din 2001 Pentru acasă Protecție completă pentru universul tău digital și cel al familiei tale – pentru orice fel de dispozitiv sau experiențe online. Vedeți Soluțiile Pentru companii mici Protejează date confidențiale și reputația micii tale companii. Vedeți Soluțiile Pentru companii Alegeți platforma noastră de securitate sau serviciul administrat pentru a deveni o companie mai rezistentă pe plan cibernetic. Vedeți Soluțiile Raport de evaluare a securității cibernetice pentru 2026 Cum descriu 1.200 de profesioniști în IT și securitate starea reală a securității din prezent Citiți raportul Partener Ferrari în domeniul securității cibernetice Un parteneriat născut din pasiune pentru performanță ridicată și inovații tehnologice. Citiți mai multe Bitdefender GravityZone PHASR Descoperiți cum Bitdefender GravityZone PHASR oferă o consolidare dinamică și personalizată a securității, care reduce suprafața de atac fără a afecta productivitatea. Citiți mai multe Recunoaștere în industrie Bitdefender este recunoscută de firmele de analiști din industria securității cibernetice și de organizațiile independente de testare. Vezi tot Sunteți deja client? Noi credem în parteneriate pe termen lung. Dumneavoastră obțineți reduceri și beneficii suplimentare la reînnoire. Soluții pentru acasă Soluții pe",
+      "text_chars": 7518,
+      "signals": {
+        "hiring": {
+          "careers_page_found": true,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "gtm"
+        ],
+        "location": {
+          "romania": true,
+          "cities": [
+            "românia"
+          ]
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "de",
+          "de-at",
+          "de-ch",
+          "de-de",
+          "en",
+          "en-ae",
+          "en-au",
+          "en-bg",
+          "en-bz",
+          "en-ca",
+          "en-cz",
+          "en-dk",
+          "en-gb",
+          "en-hu",
+          "en-id",
+          "en-il",
+          "en-in",
+          "en-jm",
+          "en-kr",
+          "en-lv",
+          "en-mt",
+          "en-my",
+          "en-no",
+          "en-nz",
+          "en-ph",
+          "en-pl",
+          "en-ro",
+          "en-sa",
+          "en-sg",
+          "en-sv",
+          "en-th",
+          "en-us",
+          "en-za",
+          "es",
+          "es-cl",
+          "es-co",
+          "es-es",
+          "es-mx",
+          "es-pe",
+          "fr-be",
+          "fr-fr",
+          "it",
+          "it-it",
+          "nl",
+          "nl-be",
+          "nl-nl",
+          "pt",
+          "pt-br",
+          "pt-pt",
+          "ro",
+          "ro-ro",
+          "sv",
+          "sv-se",
+          "x-default",
+          "zh-hk",
+          "zh-tw"
+        ],
+        "category_tags": {
+          "saas_product": 1,
+          "cybersecurity": 15
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    }
+  ],
+  "prospects": [
+    {
+      "company": "UiPath Bucharest",
+      "domain": "uipath.com",
+      "pages": [
+        {
+          "url": "https://uipath.com",
+          "final_url": "https://www.uipath.com/",
+          "http_status": 200,
+          "bytes": 727652,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 430,
+          "error": null
+        },
+        {
+          "url": "https://www.uipath.com/careers",
+          "final_url": "https://www.uipath.com/careers",
+          "http_status": 200,
+          "bytes": 501371,
+          "retrieved_at": "2026-08-28T16:20:17Z",
+          "elapsed_ms": 258,
+          "error": null
+        }
+      ],
+      "title": "The UiPath Platform™ for Business Orchestration and Automation | UiPath",
+      "meta_description": "Transform enterprise operations with the UiPath Platform™ for business orchestration and automation, enabling AI agents, robots, and people to deliver secure, compliant outcomes at scale.",
+      "lang": "en",
+      "h1": [
+        "Your clear path to AI results"
+      ],
+      "h2": [
+        "See the path in action",
+        "One platform. Three layers. Every outcome traceable.",
+        "UiPath Solutions for industries and departments",
+        "Proven outcomes across every industry",
+        "Build with what you know",
+        "Testing that runs itself",
+        "Ready to start?"
+      ],
+      "text_excerpt": "The UiPath Platform™ for Business Orchestration and Automation | UiPath FUSION is coming. FUSION is coming. days hours minutes Register now Your clear path to AI results Break through enterprise complexity with one platform for business orchestration and automation. Built for your business. Connected across your systems. Trusted to deliver measurable AI results. See how Start free UiPath Careers - Shape the Future of Agentic Automation & AI | UiPath FUSION is coming. FUSION is coming. days hours minutes Register now Careers UIPATH CAREERS Agents think. Robots do. People lead. Explore careers at UiPath. Search jobs Who we are Our world is in perpetual motion, and so is UiPath. We constantly renew, rethink, reinvent to create something better. We move to improve. ​UiPath is a place where curious minds come together to help others work better. Where we learn from our mistakes. And where new ways of thinking build the path to a better world. Let’s build that path together. Game-changers United purpose Failing forward Flexibility We're humble game-changers We do big things, but we approach our work with humility. Because at UiPath, we’re doing something profound: we’re making work itself more meaningful. We’re helping people do more, learn more, and have more fulfilling careers. But we know none of this is easy, and we don’t have all the answers. So, we attract people who never stop asking questions. We’re united by an ambitious purpose Accelerating human achievement by shaping th",
+      "text_chars": 4408,
+      "signals": {
+        "hiring": {
+          "careers_page_found": true,
+          "job_keyword_hits": 4
+        },
+        "tech": [
+          "cloudflare",
+          "gtm",
+          "hubspot",
+          "react"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {
+          "saas_product": 10,
+          "martech": 1,
+          "nonprofit_community": 6
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Zitec",
+      "domain": "zitec.com",
+      "pages": [
+        {
+          "url": "https://zitec.com",
+          "final_url": "https://zitec.com",
+          "http_status": 200,
+          "bytes": 205068,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 164,
+          "error": null
+        },
+        {
+          "url": "https://zitec.com/about/",
+          "final_url": "https://zitec.com/about/",
+          "http_status": 200,
+          "bytes": 178995,
+          "retrieved_at": "2026-08-28T16:20:17Z",
+          "elapsed_ms": 137,
+          "error": null
+        }
+      ],
+      "title": "Zitec | Your Digital Transformation Partner for Scalable Results",
+      "meta_description": "Founded in 2003, Zitec is the digital transformation partner for ambitious organizations looking to achieve sustainable, significant and scalable results through technology.",
+      "lang": "en",
+      "h1": [
+        "Technology with Impact"
+      ],
+      "h2": [
+        "Solutions shaped by industry know-how",
+        "Where technology meets your business vision",
+        "End-to-end capabilities to help you build and scale",
+        "Main technology partners",
+        "What our clients say about us",
+        "Explore our latest expert insights",
+        "Build a career that changes how the world works, in a place that truly works for you",
+        "It’s time to talk to a human"
+      ],
+      "text_excerpt": "Zitec | Your Digital Transformation Partner for Scalable Results Technology with Impact Zitec is the trusted catalyst for bold organizations that want to achieve sustainable and significant results powered by technology. MAKE IT Amazing Amazing Real Special Scroll down Solutions shaped by industry know-how Financial Services Logistics & Last Mile Delivery Retail & Distribution Healthcare Public Sector See all industries We help financial institutions modernize through engaging digital lending solutions, reliable data analytics platforms and AI for improved efficiency. +40M transactions processed yearly on Zitec-built platforms +€1.2B in transaction value processed yearly through Zitec-designed platforms Explore our Financial Services experience Reimagining mobile banking for modern users See the case study We help carriers run more efficient, connected and scalable delivery operations with advanced technology that cuts costs and improves customer satisfaction. 9M users nationwide with Zitec delivering one of Romania’s most used platform +135M deliveries orchestrated annually Explore our Logistics experience Explore our Logistics experience See the case study We help retailers accelerate operational efficiency and business growth through scalable commerce platforms, connected customer experiences and AI-driven solutions. +150% growth in monthly orders through integrated omnichannel ecosystems +99.5% uptime for e-commerce operations Explore our Retail experience Fast-track omni",
+      "text_chars": 18848,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 2
+        },
+        "tech": [
+          "ga",
+          "gtm",
+          "hubspot"
+        ],
+        "location": {
+          "romania": true,
+          "cities": [
+            "brașov",
+            "bucharest",
+            "romania"
+          ]
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {
+          "saas_product": 9,
+          "fintech": 2,
+          "ecommerce": 3,
+          "martech": 4,
+          "cybersecurity": 3,
+          "consulting": 2
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "EveryMatrix Bucuresti",
+      "domain": "everymatrix.com",
+      "pages": [
+        {
+          "url": "https://everymatrix.com",
+          "final_url": "https://everymatrix.com",
+          "http_status": 200,
+          "bytes": 348366,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 158,
+          "error": null
+        },
+        {
+          "url": "https://everymatrix.com/about-us/",
+          "final_url": "https://everymatrix.com/about-us/",
+          "http_status": 200,
+          "bytes": 209839,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 172,
+          "error": null
+        }
+      ],
+      "title": "B2B iGaming Software &amp; Sports Betting Platform Provider",
+      "meta_description": "B2B iGaming software provider for casino, sportsbook, lottery, payments, content, compliance and managed services ✓ Full stack platform for operators",
+      "lang": "en-gb",
+      "h1": [
+        "EveryMatrix is an iGaming platform & software solutions provider for industry leaders"
+      ],
+      "h2": [
+        "The EveryMatrix Effect",
+        "What we do",
+        "What's new",
+        "Hot off the press",
+        "Ready to start a conversation?"
+      ],
+      "text_excerpt": "B2B iGaming Software & Sports Betting Platform Provider Everything is possible We deliver platform, sports, and casino technology to tier-1 brands within the global regulated iGaming and lottery industries with proven results Get in touch Explore what we do Trusted by industry leaders Tier-1 Turnkey Platform Technology EveryMatrix is an iGaming platform & software solutions provider for industry leaders Serving global operators, lotteries, and fast-growing challenger brands iGaming software trusted to deliver complex, multi-jurisdiction launches with compliant, scalable systems Unified, API-first platform across sports and casino, built for regulated markets Full omnichannel turnkey or modular delivery across casino and sports betting Explore our turnkey delivery The EveryMatrix Effect Bespoke design & delivery: the magic ingredients that make our partners stay with us year after year, generating consistent growth for customers. We call this the EveryMatrix Effect. Launching a scalable platform for Betsson Cameroon and beyond Helping Betsson launch a localised, mobile-first sportsbook and casino platform in Cameroon, creating a scalable foundation for growth in complex, high-potential African markets. Read more on Launching a scalable platform for Betsson Cameroon and beyond Delivering premium casino content to Finland’s state-owned operator Seeking to expand its online casino offering, Veikkaus partnered with EveryMatrix to deliver fully compliant, high-quality content at sc",
+      "text_chars": 10681,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "gtm",
+          "wordpress"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en",
+          "en-gb",
+          "es",
+          "pt",
+          "x-default"
+        ],
+        "category_tags": {
+          "saas_product": 19,
+          "igaming": 27,
+          "fintech": 1,
+          "martech": 4
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Omniconvert",
+      "domain": "omniconvert.com",
+      "pages": [
+        {
+          "url": "https://omniconvert.com",
+          "final_url": "https://www.omniconvert.com/",
+          "http_status": 200,
+          "bytes": 284685,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 200,
+          "error": null
+        },
+        {
+          "url": "https://www.omniconvert.com/explore/",
+          "final_url": "https://www.omniconvert.com/explore/",
+          "http_status": 200,
+          "bytes": 416793,
+          "retrieved_at": "2026-08-28T16:20:17Z",
+          "elapsed_ms": 172,
+          "error": null
+        }
+      ],
+      "title": "Omniconvert Nexus - The AI eCommerce Growth Engine That Acts, Not Just Advises",
+      "meta_description": "Nexus is the AI eCommerce growth engine for Shopify. 840 AI agents run anomaly detection, opportunity mining, hypothesis generation, ad creative production, experiment execution, profit measurement, and competitor monitoring continuously. Built on 13 years and 70,000+ experiments.",
+      "lang": "en",
+      "h1": [
+        "AI eCommerce growth engine that acts , not just advises."
+      ],
+      "h2": [
+        "Built for every layer of ecommerce growth .",
+        "Most AI tools learn only from your data. Nexus arrives with 13 years of pattern recognition built in.",
+        "Brands that trust us.",
+        "Four jobs your current AI tools tell you to do. Nexus does them for you.",
+        "Your store generates data. Every other AI tool hands it back and asks you to decide.",
+        "You stay in control of strategy. Nexus handles the work.",
+        "What Nexus will never do without your approval.",
+        "840 AI agents. One platform. Zero manual coordination.",
+        "AI eCommerce growth engine for every role .",
+        "What the first 90 days actually looks like."
+      ],
+      "text_excerpt": "Omniconvert Nexus - The AI eCommerce Growth Engine That Acts, Not Just Advises Now onboarding founding brands · Built on 13 years & 70,000+ experiments AI eCommerce growth engine that acts , not just advises. Nexus handles the execution your team shouldn't be doing by hand - so they can focus on the decisions only they can make. Install now Limited founding brand places. learning Trusted by brands from $5M Shopify stores to global retailers - on the products that power Nexus CRO Case Study CRO Case Study 13 years of ecommerce optimization experience 70,000+ experiments run on the Omniconvert platform 7,000+ stores in the Crobenchmark report across 15+ industries 2,500+ active brands on Omniconvert products 840 AI agents running continuously inside Nexus One growth system. Three products. Built for every layer of ecommerce growth . Nexus acts on the data. Explore tests the ideas. Pulse captures the voice. Together, one connected growth system. AI execution engine New A/B testing & CRO NPS & customer voice Nexus · AI execution engine The AI that acts on your data, not just reports it. 840 AI agents across 7 functions detect opportunities, rank experiments, generate ad creative, and launch campaigns. You approve the outputs. Nexus handles the execution. Anomaly detection in under 15 minutes AI-generated ad creative, human-approved True Profit measurement, not just ROAS Shopify integration, setup in under 2 hours Explore Nexus → Install now Omniconvert / Nexus · Priority actions ",
+      "text_chars": 155981,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 69
+        },
+        "tech": [
+          "ga",
+          "gtm",
+          "hubspot",
+          "react",
+          "shopify"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {
+          "saas_product": 1,
+          "ecommerce": 11,
+          "martech": 14,
+          "education": 2
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Romanian Software",
+      "domain": "sdworx.ro",
+      "pages": [
+        {
+          "url": "https://sdworx.ro",
+          "final_url": "https://www.sdworx.ro/ro-ro",
+          "http_status": 200,
+          "bytes": 231325,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 884,
+          "error": null
+        },
+        {
+          "url": "https://www.sdworx.ro/ro-ro/despre-sd-worx",
+          "final_url": "https://www.sdworx.ro/ro-ro/despre-sd-worx",
+          "http_status": 200,
+          "bytes": 1196049,
+          "retrieved_at": "2026-08-28T16:20:17Z",
+          "elapsed_ms": 448,
+          "error": null
+        }
+      ],
+      "title": "Salarizare și servicii HR | SD Worx",
+      "meta_description": "SD Worx oferă soluții HR integrate, scalabile: salarizare, beneficii, managementul capitalului uman și al forței de muncă.",
+      "lang": "ro-ro",
+      "h1": [
+        "Soluții de HR, salarizare și pontaj"
+      ],
+      "h2": [
+        "S o l u ț i i d e H R , s a l a r i z a r e ș i p o n t a j",
+        "Partener HR de încredere: salarizare, pontaj",
+        "make work work",
+        "0",
+        "0",
+        "0",
+        "Premii și distincții",
+        "Avansează cu încredere"
+      ],
+      "text_excerpt": "Salarizare și servicii HR | SD Worx HR & Payroll Academy Login clienti colorful.hr Soluții de HR, salarizare și pontaj S o l u ț i i d e H R , s a l a r i z a r e ș i p o n t a j P e n t r u t o a t e c o m p a n i i l e ș i e c h i p e l e Află mai multe Susținem peste 100.000 de clienți cu servicii de HR și salarizare Soluțiile noastre Partener HR de încredere: salarizare, pontaj Îmbinând tehnologia inteligentă, expertiza solidă și implementarea sigură, ajutăm organizațiile să transforme complexitatea în încredere. Payroll Soluțiile noastre de salarizare și gestiune a beneficiilor contribuie la satisfacția angajaților, indiferent de dimensiunea companiei. Oferim soluții SaaS, externalizare completă, consultanță în HR, fiscalitate și juridică. Află mai multe Human Capital Management Soluții HR scalabile și flexibile, care simplifică sarcinile administrative și îți oferă acces rapid la date valoroase. Descoperă cum putem transforma experiența angajaților și managerilor, pentru un impact real în organizația ta. Află mai multe Workforce Management Instrumentele de administrare a resurselor umane, de la pontaj și prezență, până la planificarea și gestionarea sarcinilor, te ajută să crești eficiența, calitatea și să asiguri bunăstarea angajaților. Află mai multe Trusted to make work work Suntem partenerul tău local de resurse umane, la scară europeană. SD Worx oferă soluții personalizate și integrate de resurse umane și salarizare, expertiză locală și acoperire globală. 0 de țări",
+      "text_chars": 8491,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "angular",
+          "nextjs"
+        ],
+        "location": {
+          "romania": true,
+          "cities": [
+            "bucurești",
+            "românia"
+          ]
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "ro-ro"
+        ],
+        "category_tags": {
+          "saas_product": 4,
+          "hr_payroll": 16,
+          "consulting": 1,
+          "education": 2
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Axway România",
+      "domain": "axway.com",
+      "pages": [
+        {
+          "url": "https://axway.com",
+          "final_url": "https://www.axway.com/en",
+          "http_status": 200,
+          "bytes": 168623,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 1192,
+          "error": null
+        },
+        {
+          "url": "https://www.axway.com/en/company/careers",
+          "final_url": "https://www.axway.com/en/company/careers",
+          "http_status": 200,
+          "bytes": 122893,
+          "retrieved_at": "2026-08-28T16:20:18Z",
+          "elapsed_ms": 268,
+          "error": null
+        }
+      ],
+      "title": "Axway Enterprise Integration | API Management, MFT, B2B Integration",
+      "meta_description": "Unlock your enterprise data to open everything: new digital experiences, new offerings, and new markets.",
+      "lang": "en",
+      "h1": [],
+      "h2": [
+        "Case Study",
+        "Guide",
+        "Resources",
+        "About Us",
+        "A trusted choice for some of the world’s top brands",
+        "Solve your most critical challenges",
+        "Enterprise integration designed for a modern world",
+        "Built for the demands of regulated industries",
+        "We're a recognized industry leader",
+        "Leading voices agree: trust and security are at the core of Axway products"
+      ],
+      "text_excerpt": "Axway Enterprise Integration | API Management, MFT, B2B Integration Skip to main content English English Français Deutsch Português, Brasil + English English Français Deutsch Português, Brasil Contact Us Integration. Smart. Secure. Control your AI, govern every API, and connect every system across cloud and on premises, without ripping out what already works. Talk to an Expert A trusted choice for some of the world’s top brands Solve your most critical challenges Adopt AI responsibly Secure, control, and monitor AI models and agents with the controls your business requires. Govern APIs at scale Increase agility, improve developer productivity, and scale digital services with enterprise API governance. Modernize legacy systems Extend the value of existing systems while connecting applications, data, and services across your business. Enable trusted business collaboration Securely exchange data with customers, suppliers, and partners while reducing risk and manual effort. Enterprise integration designed for a modern world Connect systems, data, and partners across cloud and on-premises environments without ripping and replacing. Amplify Bring API-first, AI-ready services to market faster Explore Amplify Managed File Transfer Move data securely and reliably at enterprise scale Learn About MFT B2B Integration Bridge traditional EDI and new integration patterns See B2B Integration Financial Accounting Hub Centralize accounting rules to ensure accuracy and compliance Explore Our Fi",
+      "text_chars": 7565,
+      "signals": {
+        "hiring": {
+          "careers_page_found": true,
+          "job_keyword_hits": 1
+        },
+        "tech": [],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "de",
+          "en",
+          "fr",
+          "pt-br",
+          "x-default"
+        ],
+        "category_tags": {
+          "saas_product": 15,
+          "fintech": 2,
+          "martech": 5,
+          "cybersecurity": 4
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "ThemeIsle",
+      "domain": "themeisle.com",
+      "pages": [
+        {
+          "url": "https://themeisle.com",
+          "final_url": "https://themeisle.com",
+          "http_status": 200,
+          "bytes": 254191,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 160,
+          "error": null
+        },
+        {
+          "url": "https://themeisle.com/about-us/",
+          "final_url": "https://themeisle.com/about-us/",
+          "http_status": 200,
+          "bytes": 225192,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 84,
+          "error": null
+        }
+      ],
+      "title": "Themeisle - Built to Last WordPress Themes &amp; Plugins",
+      "meta_description": "Reliable WordPress themes and plugins with exceptional support. Behind Neve, Optimole &amp; WP Full Pay powering over 2M+ active installations.",
+      "lang": "en-us",
+      "h1": [
+        "WordPress Themes &amp; Plugins for yer voyage"
+      ],
+      "h2": [
+        "Themes",
+        "Neve",
+        "Hestia",
+        "Plugins",
+        "Set sail with a fleet of 471,039 pirates",
+        "Blog",
+        "About Us",
+        "Supported by Real People",
+        "Our products be used by",
+        "Our tutorials"
+      ],
+      "text_excerpt": "Themeisle - Built to Last WordPress Themes & Plugins Ahoy, me hearties! We are Themeisle and we build long-lasting WordPress Themes & Plugins for yer voyage Themes Find your perfect match in our list of flexible starter sites and responsive themes for WordPress View All Themes Neve Hestia Otter Blocks Lightweight WordPress plugin that brings extra Gutenberg blocks to your site. Masteriyo Create and sell online courses with an intuitive builder, student management, and built-in payments. Feedzy Automatically curate and post the best content to your WordPress site. Plugins Blimey! Add more firepower to yer site, theme and rule the seven seas. See All Plugins Set sail with a fleet of 471,039 pirates I want to give a big shout out to ThemeIsle. They have been so amazing in supporting me. Initially I didn t know anything about building websites but the team and the support I was given was incredible. They helped me not only to layout the site but also with the technical details, so I just wanted to say thank you and I would recommend ThemeIsle to anyone who is considering building their own website! Jason Szolomayer – 3dp4me.org Going from Hestia Free to Hestia Pro helped us to make a better landing page without any third party plugins. Combined with Elementor, we re able to design all we want. Vincent Duvernet – 1001nordiques.com Thank you for creating a super easy solution for non-professional coders and for the excellent support. After interacting with other free and paid theme",
+      "text_chars": 8905,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 3
+        },
+        "tech": [
+          "wordpress"
+        ],
+        "location": {
+          "romania": true,
+          "cities": [
+            "bucharest",
+            "romania"
+          ]
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en-us"
+        ],
+        "category_tags": {
+          "agency_outsourcing": 1,
+          "fintech": 1,
+          "education": 4,
+          "nonprofit_community": 1
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "mindit.io",
+      "domain": "mindit.io",
+      "pages": [
+        {
+          "url": "https://mindit.io",
+          "final_url": "https://mindit.io",
+          "http_status": 200,
+          "bytes": 679596,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 480,
+          "error": null
+        },
+        {
+          "url": "https://mindit.io/careers/",
+          "final_url": "https://mindit.io/careers/",
+          "http_status": 200,
+          "bytes": 429082,
+          "retrieved_at": "2026-08-28T16:20:17Z",
+          "elapsed_ms": 432,
+          "error": null
+        }
+      ],
+      "title": "mindit.io | AI-Driven Data &amp; Product Engineering Partner",
+      "meta_description": "mindit.io takes your enterprise to new levels with custom AI solutions and data-driven insights across retail &amp; banking.",
+      "lang": "en-us",
+      "h1": [
+        "helping enterprises become AI-native organizations"
+      ],
+      "h2": [
+        "get in touch /",
+        "/ AI Manifest 2026",
+        "/ tech partner of choice for retail leaders",
+        "/ The Definitive Guide to AI Strategy Rollout in Retail Enterprises",
+        "/ The State of Modern AI in Banking 2026",
+        "/ chat with your data",
+        "/ banking",
+        "/ partners for products with purpose",
+        "/ our partners and our people",
+        "/ our impact in retail"
+      ],
+      "text_excerpt": "mindit.io | AI-Driven Data & Product Engineering Partner Skip to content / AI Manifest 2026 The future of software delivery is here. Read The Manifest / tech partner of choice for retail leaders We support global retailers to expand and grow their market share through AI-driven, data-enabled, omnichannel solutions and custom enterprise applications Find out more / The Definitive Guide to AI Strategy Rollout in Retail Enterprises Compiled by an industry-leading team of data scientists, technical leaders and business executives, this whitepaper empowers enterprises with a complete guide and process overview on AI Strategy and Solutions rollout for Retail. Download Whitepaper / The State of Modern AI in Banking 2026 A definitive roadmap for CTOs, CFOs, and Heads of Digital to navigate the post-hype era, featuring 65 Modern AI Case Studies from Tier-1 banks. Download Report / chat with your data Stop Struggling with Data. Get Answers Instantly. Chat with Your Data is our AI-powered solution that allows you to access insights from your existing data sources, using plain English. Transform your organization s data strategy and experience the future of data analysis, today. Find out more / banking In banking s digital transformation, we provide expert solutions for data, AI, and software challenges. Find out more / partners for products with purpose we are the partner of choice for data product engineering to drive your business growth and deliver an impact inside and outside your o",
+      "text_chars": 25756,
+      "signals": {
+        "hiring": {
+          "careers_page_found": true,
+          "job_keyword_hits": 20
+        },
+        "tech": [
+          "gtm",
+          "hubspot",
+          "wordpress"
+        ],
+        "location": {
+          "romania": true,
+          "cities": [
+            "bucharest",
+            "cluj",
+            "constanta",
+            "iasi",
+            "romania",
+            "sibiu"
+          ]
+        },
+        "size_hint": {
+          "number": 0,
+          "band": "1-10"
+        },
+        "languages": [
+          "de",
+          "en",
+          "en-us",
+          "x-default"
+        ],
+        "category_tags": {
+          "saas_product": 2,
+          "fintech": 4,
+          "ecommerce": 1,
+          "martech": 4,
+          "nonprofit_community": 2
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Plant an App Romania",
+      "domain": "plantanapp.com",
+      "pages": [
+        {
+          "url": "https://plantanapp.com",
+          "final_url": "https://www.plantanapp.com:443/",
+          "http_status": 200,
+          "bytes": 81087,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 2211,
+          "error": null
+        },
+        {
+          "url": "https://www.plantanapp.com:443/about-us/contact-us",
+          "final_url": "https://www.plantanapp.com:443/about-us/contact-us",
+          "http_status": 200,
+          "bytes": 97545,
+          "retrieved_at": "2026-08-28T16:20:19Z",
+          "elapsed_ms": 931,
+          "error": null
+        }
+      ],
+      "title": "Government Low-Code Platform | Plant an App",
+      "meta_description": "Build secure, compliant government portals for case management, workflows, and citizen services, faster and more cost-effectively with low code.",
+      "lang": "en-us",
+      "h1": [
+        "Secure, Low-Code Portals for Government Modernization",
+        "Our Federal Solutions",
+        "Challenges We Help Agencies Overcome",
+        "Proven Impact in Government Work",
+        "Built for Federal Security &amp; Compliance"
+      ],
+      "h2": [
+        "Secure, low-code solutions for federal missions:",
+        "Manual processes",
+        "Compliance reporting",
+        "Citizen service backlogs",
+        "Budget constraints",
+        "Aligned with FedRAMP standards",
+        "Section 508 accessible",
+        "Encryption at rest &amp; in transit",
+        "Full audit logging and role-based access",
+        "Trusted by Agencies and Partners Delivering Citizen Services Nationwide"
+      ],
+      "text_excerpt": "Government Low-Code Platform | Plant an App Skip to main content HOME Secure, Low-Code Portals for Government Modernization The platform agencies and government contractors use to deliver mission-critical portals quickly, predictably, and at scale. Request a Federal Demo Download Capability Statement (PDF) UEI: FT4MXA1RBQJ3 CAGE: 8N4X0 NAICS: 513210, 541511 Section 508 Accessible Security Aligned to Federal Standards UEI: FT4MXA1RBQJ3 CAGE: 8N4X0 NAICS: 513210, 541511 Section 508 Accessible Security Aligned to Federal Standards UEI: FT4MXA1RBQJ3 CAGE: 8N4X0 NAICS: 513210, 541511 Section 508 Accessible Security Aligned to Federal Standards Our Federal Solutions Secure, low-code solutions for federal missions: Case & Records Management Systems Citizen Service & Permit Portals Workflow Automation & Approvals Compliance Dashboards & Reporting Secure Integrations with Legacy & Cloud Systems See Federal Solutions Challenges We Help Agencies Overcome Manual processes Replace with automated, auditable workflows. Compliance reporting NIST-aligned dashboards and exports. Citizen service backlogs Self-service portals with Section 508 compliance. Budget constraints Low-code efficiency that saves time and cost. Proven Impact in Government Work Reduced federal program processing times by 40% Enabled primes to win smaller-budget RFPs by lowering delivery cost cost Delivered secure portals and workflow systems in record time Delivered secure portals and workflow systems in record time Flexib",
+      "text_chars": 2676,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "angular",
+          "gtm",
+          "recaptcha"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en-us"
+        ],
+        "category_tags": {
+          "saas_product": 13,
+          "cybersecurity": 5
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "HyperSense Software",
+      "domain": "hypersense-software.com",
+      "pages": [
+        {
+          "url": "https://hypersense-software.com",
+          "final_url": "https://hypersense-software.com",
+          "http_status": 200,
+          "bytes": 550964,
+          "retrieved_at": "2026-08-28T16:20:16Z",
+          "elapsed_ms": 431,
+          "error": null
+        },
+        {
+          "url": "https://hypersense-software.com/services/ai-development-company",
+          "final_url": "https://hypersense-software.com/services/ai-development-company",
+          "http_status": 200,
+          "bytes": 434425,
+          "retrieved_at": "2026-08-28T16:20:17Z",
+          "elapsed_ms": 525,
+          "error": null
+        }
+      ],
+      "title": "AI Agent Development | Live Systems | HyperSense",
+      "meta_description": "Production AI agents you can test today. Enterprise platforms for Signal Iduna and BASF since 2003. ISO 27001, EU AI Act ready. Built on our own framework.",
+      "lang": "en",
+      "h1": [
+        "AI Agent Development Company. Production Systems, Not Demos."
+      ],
+      "h2": [
+        "AI agents live in production.",
+        "Our Clients &amp; Partners",
+        "Verified, Certified, Independently Rated",
+        "Proven Results",
+        "AI Agents We Build",
+        "Why Teams Choose HyperSense",
+        "How We Build AI Agents: The HyperCore Architecture",
+        "AI Feature Sprint: Deployed Agent in 4 Weeks",
+        "AWS Partnership &amp; Cloud Funding Support",
+        "After Launch: HyperCare"
+      ],
+      "text_excerpt": "AI Agent Development | Live Systems | HyperSense Your browser does not support the video tag. AI Agent Development Company. Production Systems, Not Demos. HyperSense builds custom AI agents for enterprise teams and growth-stage startups in regulated industries: insurance, logistics, fintech, proptech and more. Every agent runs on our own framework with built-in governance, eval-driven deployment, and deterministic validation. ISO 27001 certified, EU AI Act ready, shipping production AI agents. AI agents live in production. Reperks: 20+ hours reduced to 10-15 minutes per billing cycle. ZURI: 400+ daily conversations qualifying luxury real estate buyers for Vela Zanzibar. Twenty years of enterprise engineering behind them: Signal Iduna: 300,000+ policyholders on a platform we built and maintain. Trusted Carrier: 40,000+ documents a week across BASF and Henkel facilities in 13 countries. Test one of our agents Start with a 4-week AI Feature Sprint Start with a 4-week AI Feature Sprint. One deployed agent tied to your KPIs. Built on HyperCore. Governance and cost controls from day one. Our Clients & Partners Insurance, logistics, fintech, medtech, proptech, automotive, and more Verified, Certified, Independently Rated The trust signals that matter when you re evaluating AI vendors for regulated environments. 4.9/5 on Clutch Across 31 Verified Reviews Clutch Global Winner. Clutch Champion (Top 10%). Clutch Top 1000. The Manifest named us Chicago s Most Reviewed B2B Leader. These a",
+      "text_chars": 35217,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 14
+        },
+        "tech": [
+          "angular",
+          "gtm",
+          "hubspot",
+          "nextjs",
+          "react",
+          "recaptcha",
+          "wordpress"
+        ],
+        "location": {
+          "romania": true,
+          "cities": [
+            "bucharest",
+            "romania"
+          ]
+        },
+        "size_hint": {
+          "number": 40,
+          "band": "11-50"
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {
+          "saas_product": 6,
+          "fintech": 2,
+          "martech": 5,
+          "cybersecurity": 1
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    }
+  ],
+  "refused": {
+    "customers": [],
+    "prospects": []
+  }
+}

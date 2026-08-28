@@ -1,18 +1,18 @@
 {
   "schema_version": 2,
   "team": {
-    "name": "TODO team name",
-    "members": ["TODO member 1"]
+    "name": "publi22",
+    "members": ["mogaeduard", "hackatonnnnn"]
   },
-  "track": "TODO one of: ai-search-optimization | personalized-growth-engines | churn-detection | synthetic-buyer-simulations | plg-automation | multi-agent-orchestration | custom",
-  "problem": "TODO one sentence: who has what GTM problem and what the skill produces",
-  "entry_skill": ".agents/skills/TODO-skill-name/SKILL.md",
+  "track": "personalized-growth-engines",
+  "problem": "The Business Club lead at VIP (Voluntari pentru Idei si Proiecte, vipromania.ro) qualifies partner companies by eye from a hand-made spreadsheet; icp-validator derives VIP's actual ideal customer profile from the companies that already said yes and scores new prospects against it with sourced evidence.",
+  "entry_skill": ".agents/skills/icp-validator/SKILL.md",
   "skills": [
-    { "path": ".agents/skills/TODO-skill-name/SKILL.md", "role": "TODO the one job this skill owns" }
+    { "path": ".agents/skills/icp-validator/SKILL.md", "role": "Derives the ICP from customers, scores prospects with evidence, and drafts Romanian openers for the top three." }
   ],
   "seed_prompt": "demo/seed-prompt.md",
-  "input": "demo/input/TODO-file",
-  "output": "demo/output/TODO-file",
+  "input": "demo/input/prospects.csv",
+  "output": "demo/output/prospect-fit.md",
   "evals": "demo/evals.md",
   "run_sheet": "DEMO.md"
 }

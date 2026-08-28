@@ -1,44 +1,61 @@
 # Run sheet
 
-The organizer presents this repository for you, in 2 minutes, without having seen it before. Write every line for them. Replace every `TODO`. Keep it to one screen.
+Fallback at ~60 seconds: open [`demo/output/prospect-fit.md`](demo/output/prospect-fit.md).
 
 ## Say this — 20 seconds
 
-**Team:** TODO
+**Team:** publi22 (mogaeduard, hackatonnnnn)
 
-**Track:** TODO
+**Track:** personalized-growth-engines
 
-**Who has the problem:** TODO one named user role at one kind of company
+**Who has the problem:** the partnerships lead at VIP, a Romanian student organization that signs company partners. They qualified 135 companies by eye, on a spreadsheet, over two weeks.
 
-**The job this skill does:** TODO one sentence
+**The job this skill does:** it derives the ideal customer profile from the companies that already said yes, by reading their public websites live, then scores a new prospect list against it with a source URL behind every claim, and drafts an opener for the top three.
 
-**Boundary — what it never does:** TODO
+**Boundary — what it never does:** it never touches people, emails or profiles, it never sends anything, and it says "insufficient evidence" instead of guessing.
+
+Say: "Every company writes an ICP in a slide. This one is computed from the customers you actually closed. We are running it on Apify, tonight's sponsor, because their customer list is public, so everything on this screen can be checked."
 
 ## Run this — 60 seconds
 
 1. Codex is open at the repository root.
 2. Paste [`demo/seed-prompt.md`](demo/seed-prompt.md).
-3. Watch for: TODO the one visible thing that proves it worked (a file written, a table printed, a decision with sources)
-4. If nothing visible after 60 seconds, open the fallback: [`demo/output/TODO`](demo/output/)
+3. **Codex will ask to run a command that needs the network. Click "Allow once".** If the script prints `NO NETWORK`, it is asking for that approval: run it again after approving.
+4. Watch for: the ranked table printed in the terminal, then three files under `out/`.
+5. If nothing visible after 60 seconds, open the fallback: [`demo/output/prospect-fit.md`](demo/output/prospect-fit.md).
+
+While it runs, say: "It is fetching 22 company websites right now, twelve customers and ten prospects, homepage plus the careers or about page for each. The collector takes about four seconds. Everything after that is the model writing the three drafts."
 
 ## Show this — 25 seconds
 
-**Result:** TODO what the output is and what a user does with it
+Open `out/prospect-fit.md`. Point to the fit column, then to the evidence column, then to the "Insufficient evidence" section at the bottom.
 
-**Evidence:** TODO where the sources, retrieval dates, and confidence are visible in the output
+**Result:** the ICP is derived from 12 customer companies, 10 of which had usable public evidence, confidence `medium`. Three prospects score 80 or more: Omniconvert 84, UiPath 83, Axway 80. Four score under 30 and are marked unfit. `out/openers.md` holds one Romanian draft per top company, addressed to a role, never to a person.
 
-**Fallback output was produced:** TODO date, time, and how
+Say: "Apify's real customer base is SaaS products and martech, hiring, English language sites, mostly React and Google Tag Manager. Omniconvert scores 84 because it matches on business line, hiring and language, and it loses points on stack overlap. Every one of those numbers has a URL and a timestamp beside it."
+
+**Evidence:** every ranked row in `prospect-fit.md` carries the evidence URL and its `retrieved_at`. Prospects whose page could not be read are listed separately and never given a score.
+
+**Fallback output was produced:** 2026-08-28 at 19:22 EEST, by running this exact seed prompt in Codex from this repository.
 
 ## Evals — 10 seconds
 
 | Case | Result | Where |
 | --- | --- | --- |
-| Intended | TODO pass/fail in one clause | [`demo/evals.md`](demo/evals.md) |
-| Insufficient evidence | TODO | [`demo/evals.md`](demo/evals.md) |
-| Failure / exclusion | TODO | [`demo/evals.md`](demo/evals.md) |
+| Intended | pass, 10 of 10 prospects ranked with sources, 3 above 80 | [`demo/evals.md`](demo/evals.md) |
+| Insufficient evidence | pass, a dead domain and a JavaScript only page both refused a score; a 2 customer ICP is labelled insufficient | [`demo/evals.md`](demo/evals.md) |
+| Failure / exclusion | pass, a file with an email column exits 2 before any network call | [`demo/evals.md`](demo/evals.md) |
 
 ## Close — 5 seconds
 
-**Reusable on:** TODO what other inputs of the same kind this works on unchanged
+**Reusable on:** any two CSVs with `company,domain` columns, or a published Google Sheet URL. The same evening it ran unchanged on `demo/input/prospects-all.csv`, all 35 companies from the same source.
 
-**Material limitation:** TODO the honest one
+**Material limitation:** this reads public websites. Revenue, deal size, sales cycle and retention are printed only when the CRM columns exist in the input, otherwise the report says "not in input". No site in this run stated an employee count, so the size axis scored zero for everyone and the report says so.
+
+## If a judge asks
+
+- **Why not ask ChatGPT what our ICP is?** It would answer from memory of the internet. This fetches your own customers' sites, counts what they have in common, and shows the count. Change one customer and the profile changes.
+- **Is the fit score real or is the model inventing it?** The score is computed in `scripts/collect.py`, in Python, from the fetched pages. The model is told not to recompute or adjust it. Every component prints its own points and the reason.
+- **Does it work with our CRM?** Point it at your export. `company,domain` are the only required columns; `status`, `deal_size`, `days_to_close`, `industry`, `employees`, `country`, `revenue`, `retention` are used if present and reported as "not in input" if not. It also accepts a published Google Sheet CSV URL instead of a file.
+- **Where does personal data go?** Nowhere. If the input has an email, phone, LinkedIn or contact column, the collector exits with `REFUSED` before opening a single connection. Try it: `demo/input/evals/prospects-refused.csv`.
+- **Where did the prospect list come from?** An Apify Google Maps run for software companies in Bucharest, run id `fRPr1bcCJo3E5YJOw`, 2026-08-28 15:48 UTC, cost 3.8 cents. The provenance is in `demo/input/SOURCES.md`.

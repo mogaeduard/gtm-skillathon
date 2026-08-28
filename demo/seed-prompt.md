@@ -1,1 +1,1 @@
-$TODO-skill-name Use the input at demo/input/TODO-file and produce TODO the observable result named in DEMO.md.
+$icp-validator Use demo/input/customers.csv as our customers, demo/input/prospects.csv as the prospects, and demo/input/offer.md as the offer. Run the collector, then print the ranked fit table, the actual ICP in five lines, and how many prospects have fit 80 or more. Full reports go to out/.

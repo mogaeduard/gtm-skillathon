@@ -1,0 +1,110 @@
+{
+  "icp": {
+    "n_customers": 12,
+    "n_with_evidence": 10,
+    "icp_confidence": "medium",
+    "derived_from": "all_customers",
+    "good_customers": "not in input",
+    "category_share": {
+      "saas_product": 0.5,
+      "martech": 0.4,
+      "nonprofit_community": 0.1
+    },
+    "top_tags": [
+      "saas_product",
+      "martech"
+    ],
+    "share_romania": 0.0,
+    "share_hiring": 0.6,
+    "size_band_share": {
+      "201-1000": 0.1
+    },
+    "modal_size_band": "201-1000",
+    "tech_share": {
+      "react": 0.7,
+      "gtm": 0.6,
+      "nextjs": 0.4,
+      "ga": 0.4,
+      "wordpress": 0.3,
+      "hubspot": 0.2,
+      "shopify": 0.2,
+      "webflow": 0.2,
+      "intercom": 0.1,
+      "recaptcha": 0.1,
+      "vue": 0.1,
+      "cloudflare": 0.1
+    },
+    "tech_union": [
+      "cloudflare",
+      "ga",
+      "gtm",
+      "hubspot",
+      "intercom",
+      "nextjs",
+      "react",
+      "recaptcha",
+      "shopify",
+      "vue",
+      "webflow",
+      "wordpress"
+    ],
+    "language_share": {
+      "en": 0.7,
+      "en-us": 0.3,
+      "de": 0.2,
+      "cs": 0.1,
+      "de-de": 0.1,
+      "en-gb": 0.1,
+      "es-es": 0.1,
+      "es-mx": 0.1,
+      "fr": 0.1,
+      "fr-fr": 0.1,
+      "it": 0.1,
+      "it-it": 0.1,
+      "pt": 0.1,
+      "pt-br": 0.1,
+      "x-default": 0.1
+    },
+    "majority_languages": [
+      "en"
+    ],
+    "majority_romania": false,
+    "majority_hiring": true,
+    "crm": {
+      "win_rate": "not in input",
+      "deal_size": "not in input",
+      "days_to_close": "not in input",
+      "sales_cycle": "not in input",
+      "retention": "not in input",
+      "revenue": "not in input",
+      "industry": "not in input",
+      "country": "not in input",
+      "employees": "not in input"
+    }
+  },
+  "prospects": [
+    {
+      "company": "Nonexistent Domain SRL",
+      "domain": "nonexistent-domain-xyz123.ro",
+      "fit": null,
+      "verdict": "insufficient evidence",
+      "components": [],
+      "top_evidence": null,
+      "insufficient_evidence": true,
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "company": "Segment JS Shell",
+      "domain": "app.segment.com",
+      "fit": null,
+      "verdict": "insufficient evidence",
+      "components": [],
+      "top_evidence": {
+        "url": "https://app.segment.com",
+        "retrieved_at": "2026-08-28T16:20:15Z"
+      },
+      "insufficient_evidence": true,
+      "error": null
+    }
+  ]
+}

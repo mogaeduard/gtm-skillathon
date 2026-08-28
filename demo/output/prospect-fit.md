@@ -1,0 +1,26 @@
+# Prospect fit
+
+Scores are computed by the collector and are not adjusted by hand. ICP confidence: medium (n=10).
+
+| Rank | Company | Domain | Fit | Verdict | Points | Evidence | Retrieved at |
+| ---: | --- | --- | ---: | --- | --- | --- | --- |
+| 1 | Omniconvert | omniconvert.com | 84 | fit | category 40/40 (top tag 'martech' is a customer top-2 tag); location 15/15 (romania=False vs customer majority False); hiring 15/15 (hiring=True (job_keyword_hits=69) vs customer majority True); tech 4/10 (tech overlap ['ga', 'gtm', 'hubspot', 'react', 'shopify'] (jaccard 0.42)); size 0/10 (band None vs customer modal band 201-1000); language 10/10 (languages ['en'] vs customer majority ['en']) | https://www.omniconvert.com/ | 2026-08-28T16:20:23Z |
+| 2 | UiPath Bucharest | uipath.com | 83 | fit | category 40/40 (top tag 'saas_product' is a customer top-2 tag); location 15/15 (romania=False vs customer majority False); hiring 15/15 (hiring=True (job_keyword_hits=4) vs customer majority True); tech 3/10 (tech overlap ['cloudflare', 'gtm', 'hubspot', 'react'] (jaccard 0.33)); size 0/10 (band None vs customer modal band 201-1000); language 10/10 (languages ['en'] vs customer majority ['en']) | https://www.uipath.com/ | 2026-08-28T16:20:23Z |
+| 3 | Axway România | axway.com | 80 | fit | category 40/40 (top tag 'saas_product' is a customer top-2 tag); location 15/15 (romania=False vs customer majority False); hiring 15/15 (hiring=True (job_keyword_hits=1) vs customer majority True); tech 0/10 (tech overlap none (jaccard 0.00)); size 0/10 (band None vs customer modal band 201-1000); language 10/10 (languages ['de', 'en', 'fr', 'pt-br', 'x-default'] vs customer majority ['en']) | https://www.axway.com/en | 2026-08-28T16:20:23Z |
+| 4 | HyperSense Software | hypersense-software.com | 70 | maybe | category 40/40 (top tag 'saas_product' is a customer top-2 tag); location 0/15 (romania=True vs customer majority False); hiring 15/15 (hiring=True (job_keyword_hits=14) vs customer majority True); tech 5/10 (tech overlap ['gtm', 'hubspot', 'nextjs', 'react', 'recaptcha', 'wordpress'] (jaccard 0.46)); size 0/10 (band 11-50 vs customer modal band 201-1000); language 10/10 (languages ['en'] vs customer majority ['en']) | https://hypersense-software.com | 2026-08-28T16:20:23Z |
+| 5 | Zitec | zitec.com | 67 | maybe | category 40/40 (top tag 'saas_product' is a customer top-2 tag); location 0/15 (romania=True vs customer majority False); hiring 15/15 (hiring=True (job_keyword_hits=2) vs customer majority True); tech 2/10 (tech overlap ['ga', 'gtm', 'hubspot'] (jaccard 0.25)); size 0/10 (band None vs customer modal band 201-1000); language 10/10 (languages ['en'] vs customer majority ['en']) | https://zitec.com | 2026-08-28T16:20:23Z |
+| 6 | Plant an App Romania | plantanapp.com | 57 | maybe | category 40/40 (top tag 'saas_product' is a customer top-2 tag); location 15/15 (romania=False vs customer majority False); hiring 0/15 (hiring=False (job_keyword_hits=0) vs customer majority True); tech 2/10 (tech overlap ['gtm', 'recaptcha'] (jaccard 0.15)); size 0/10 (band None vs customer modal band 201-1000); language 0/10 (languages ['en-us'] vs customer majority ['en']) | https://www.plantanapp.com:443/ | 2026-08-28T16:20:23Z |
+| 7 | EveryMatrix Bucuresti | everymatrix.com | 27 | unfit | category 0/40 (top tag 'igaming' not in customer mix); location 15/15 (romania=False vs customer majority False); hiring 0/15 (hiring=False (job_keyword_hits=0) vs customer majority True); tech 2/10 (tech overlap ['gtm', 'wordpress'] (jaccard 0.17)); size 0/10 (band None vs customer modal band 201-1000); language 10/10 (languages ['en', 'en-gb', 'es', 'pt', 'x-default'] vs customer majority ['en']) | https://everymatrix.com | 2026-08-28T16:20:23Z |
+| 8 | mindit.io | mindit.io | 27 | unfit | category 0/40 (top tag 'fintech' not in customer mix); location 0/15 (romania=True vs customer majority False); hiring 15/15 (hiring=True (job_keyword_hits=20) vs customer majority True); tech 2/10 (tech overlap ['gtm', 'hubspot', 'wordpress'] (jaccard 0.25)); size 0/10 (band 1-10 vs customer modal band 201-1000); language 10/10 (languages ['de', 'en', 'en-us', 'x-default'] vs customer majority ['en']) | https://mindit.io | 2026-08-28T16:20:23Z |
+| 9 | ThemeIsle | themeisle.com | 16 | unfit | category 0/40 (top tag 'education' not in customer mix); location 0/15 (romania=True vs customer majority False); hiring 15/15 (hiring=True (job_keyword_hits=3) vs customer majority True); tech 1/10 (tech overlap ['wordpress'] (jaccard 0.08)); size 0/10 (band None vs customer modal band 201-1000); language 0/10 (languages ['en-us'] vs customer majority ['en']) | https://themeisle.com | 2026-08-28T16:20:23Z |
+| 10 | Romanian Software | sdworx.ro | 1 | unfit | category 0/40 (top tag 'hr_payroll' not in customer mix); location 0/15 (romania=True vs customer majority False); hiring 0/15 (hiring=False (job_keyword_hits=0) vs customer majority True); tech 1/10 (tech overlap ['nextjs'] (jaccard 0.08)); size 0/10 (band None vs customer modal band 201-1000); language 0/10 (languages ['ro-ro'] vs customer majority ['en']) | https://www.sdworx.ro/ro-ro | 2026-08-28T16:20:23Z |
+
+**3 prospects with fit 80 or more.**
+
+## Insufficient evidence
+
+None: every prospect returned a usable page.
+
+## Refused before any fetch
+
+None.

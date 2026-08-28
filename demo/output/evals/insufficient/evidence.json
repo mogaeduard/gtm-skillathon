@@ -1,0 +1,910 @@
+{
+  "meta": {
+    "started": "2026-08-28T16:20:15Z",
+    "finished": "2026-08-28T16:20:16Z",
+    "budget_s": 20.0,
+    "version": "1.0",
+    "python": "3.14.6",
+    "elapsed_s": 1.75,
+    "input_sources": {
+      "customers": "demo/input/customers.csv",
+      "prospects": "demo/input/evals/prospects-insufficient.csv"
+    }
+  },
+  "customers": [
+    {
+      "company": "Intercom",
+      "domain": "intercom.com",
+      "pages": [
+        {
+          "url": "https://intercom.com",
+          "final_url": "https://www.intercom.com/",
+          "http_status": 200,
+          "bytes": 1544603,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 927,
+          "error": null
+        },
+        {
+          "url": "https://www.intercom.com/about",
+          "final_url": "https://fin.ai/about",
+          "http_status": 200,
+          "bytes": 1572864,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 603,
+          "error": null
+        }
+      ],
+      "title": "Intercom | A complete system for human and AI customer service",
+      "meta_description": "Intercom is the only helpdesk with a natively integrated AI Agent, Fin, meaning every customer conversation improves the next one, enabling perfect experiences that were never possible before.",
+      "lang": "en",
+      "h1": [
+        "A complete system for human and AI customer service"
+      ],
+      "h2": [
+        "Two products, one seamless experience",
+        "Intercom is a fully-featured AI-powered helpdesk",
+        "Fin is the highest-performing AI agent",
+        "Together, they deliver better support experiences",
+        "Works with the tools you already use",
+        "Transparent pricing",
+        "Perfect customer experiences"
+      ],
+      "text_excerpt": "Intercom | A complete system for human and AI customer service Over 2,000 five-star reviews on A complete system for human and AI customer service Intercom is the only helpdesk with a natively integrated AI Agent , Fin . , meaning every customer conversation improves the next one, enabling perfect experiences that were never possible before. Start free trial View demo 14 day free trial. No credit card required. Two products, one seamless experience Intercom helpdesk Fin AI Agent Trusted by 30,000 + leading brands Intercom helpdesk Intercom is a fully-featured AI-powered helpdesk With an omnichannel inbox, AI-powered ticketing, and real-time assistance from Copilot, your human team has everything they need to onboard faster, work more efficiently, and deliver better customer experiences. Start free trial View demo Maximize productivity with an AI-enhanced inbox Give every agent an AI assistant that provides expert guidance, automates repetitive work, and translates conversations in real time. Learn more Ticketing, built for collaboration One ticketing system for customer issues, back-office collaboration, and tracker tickets that resolve widespread problems, keeping everyone aligned and customers informed. Learn more Support for customers, before they need it Onboard, educate, and notify your customers with in-context, automated messages that cut support volume and keep customers happy. Learn more Maximize productivity with an AI-enhanced inbox + - Give every agent an AI assis",
+      "text_chars": 35122,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 10
+        },
+        "tech": [
+          "hubspot",
+          "intercom",
+          "nextjs",
+          "react",
+          "shopify"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": 400,
+          "band": "201-1000"
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {
+          "martech": 5
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Mindvalley",
+      "domain": "mindvalley.com",
+      "pages": [
+        {
+          "url": "https://mindvalley.com",
+          "final_url": "https://www.mindvalley.com/",
+          "http_status": 200,
+          "bytes": 1168807,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 717,
+          "error": null
+        }
+      ],
+      "title": "A Better You, Every day · Mindvalley",
+      "meta_description": "Mindvalley is the world&#x27;s most powerful life transformation platform with a global community of changemakers that supports you. Become a Member today.",
+      "lang": "en",
+      "h1": [
+        "A better you",
+        "A better you",
+        "A better you"
+      ],
+      "h2": [
+        "Begin your journey today",
+        "Upcoming Mindvalley Summit",
+        "Advanced programs",
+        "Stories everywhere",
+        "Frequently asked questions"
+      ],
+      "text_excerpt": "A Better You, Every day · Mindvalley A better you every day Be part of the world’s most powerful life transformation platform Become a Member Explore programs A better you every day Be part of the world’s most powerful life transformation platform Become a Member Explore programs A better you every day Be part of the world’s most powerful life transformation platform Become a Member Explore programs Featured on Begin your journey today Unlock your fullest potential in any field with only 20-minutes a day of invaluable coaching from the world’s best Become a Member Over 1 million subscribers since 2020 Upcoming Mindvalley Summit growth in all areas 100+ of the world’s top programs for personal growth and transformation Forge lasting transformations in your mind, body, soul, love and career with 20-minute micro-coaching sessions each day led by top-tier teachers worldwide. immersive experiences 1,000+ customised tracks to elevate your mindset and feelings With a push of a button — experience brain changing hypnotic audios, sound healings, meditations and instant mood elevations. Take charge of your mind. now available Transform your life on mobile, desktop and Apple Vision Pro Whether you're on the go, in the comfort of your own home, or immersed in a revolutionary virtual environment, you have the flexibility to learn and grow whenever and wherever you choose. begin your journey A better you Grow your business, elevate your career, establish deep connections, uplift your healt",
+      "text_chars": 7585,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "ga",
+          "gtm",
+          "hubspot",
+          "react",
+          "recaptcha",
+          "vue"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {
+          "saas_product": 10,
+          "martech": 1,
+          "education": 2,
+          "nonprofit_community": 2
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Maven AGI",
+      "domain": "mavenagi.com",
+      "pages": [
+        {
+          "url": "https://mavenagi.com",
+          "final_url": "https://www.mavenagi.com/",
+          "http_status": 200,
+          "bytes": 157876,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 469,
+          "error": null
+        },
+        {
+          "url": "https://www.mavenagi.com/careers",
+          "final_url": "https://www.mavenagi.com/careers",
+          "http_status": 200,
+          "bytes": 120874,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 155,
+          "error": null
+        }
+      ],
+      "title": "Maven AGI | Enterprise AI Agent Platform for CX",
+      "meta_description": "Conversational agent platform delivers exceptional CX at a lower cost. Unifies systems, integrates knowledge sources and enables actions for 50+ customers.",
+      "lang": "en",
+      "h1": [
+        "AI agents customers actually want to talk to."
+      ],
+      "h2": [
+        "What we resolve",
+        "Features",
+        "Product",
+        "Featured integrations",
+        "Enterprise-Grade Security &amp; Compliance",
+        "Don’t be Shy."
+      ],
+      "text_excerpt": "Maven AGI | Enterprise AI Agent Platform for CX Maven AGI named to The Agentic List 2026 - One of 9 Companies listed in CX Agents category Learn More AI agents customers actually want to talk to. Maven s enterprise AI agent platform is built for the customer journey. Drive action across your existing help desk, CRM, and telephony while keeping IP and data protected with certified, auditable security. Book a demo Online learning & coaching tool, Mastermind, saw up to 93% autonomous resolution in 6 weeks Enterprise tax automation software K1X went live in 1 week with 80% autonomous resolution in 6 weeks B2B platform Rho, handled +12% monthly contacts with no added headcount, sustaining 95% CSAT What we resolve One platform working across the entire customer journey. Each agent owns a specific outcome and resolves it end to end, from the first question someone asks to the conversation that keeps an account renewing every year. Awareness & Engagement Learn More Product Discovery Learn More Inbound Sales Learn More Onboarding & Adoption Learn More Customer Support Learn More Churn Prevention & Retention Learn More Upsell & Cross-Sell Learn More Advocacy & Loyalty Learn More Agent Copilot Learn More Features What makes autonomous resolution reliable at enterprise scale: governed knowledge, defined guardrails, and AI powered support for the humans-in-the-loop. Graph of Record Charters Intelligent Fields Trust & Compliance Product AI built for the full customer journey, unifying reas",
+      "text_chars": 4722,
+      "signals": {
+        "hiring": {
+          "careers_page_found": true,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "ga",
+          "gtm",
+          "react",
+          "webflow"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {
+          "saas_product": 8,
+          "martech": 4,
+          "cybersecurity": 2,
+          "education": 1
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Cleevio",
+      "domain": "cleevio.com",
+      "pages": [
+        {
+          "url": "https://cleevio.com",
+          "final_url": "https://cleevio.com",
+          "http_status": 200,
+          "bytes": 182682,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 208,
+          "error": null
+        },
+        {
+          "url": "https://cleevio.com/careers",
+          "final_url": "https://cleevio.com/careers",
+          "http_status": 200,
+          "bytes": 108604,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 75,
+          "error": null
+        }
+      ],
+      "title": "Cleevio | AI-Powered Product Studio | Design, Build &amp; Scale with Speed",
+      "meta_description": "Transform your ideas into high-performing digital products. Let us guide your project from discovery to growth with collaborative excellence.",
+      "lang": "en",
+      "h1": [
+        "Proven builders. Faster with AI."
+      ],
+      "h2": [
+        "We design, build and scale products with AI powered speed and a founder’s mindset",
+        "Featured projects",
+        "After years of building projects outside the company, the founding team reunites to lead Cleevio into an AI-first future.",
+        "1. Ensuring the Privacy of Company Data",
+        "2. Managing Access to AI-Powered Features",
+        "Cultivating a Security-Conscious Culture",
+        "Quick Security Audit for Leadership",
+        "Conclusion: Balancing Innovation and Security",
+        "AI Head of Finance",
+        "AI Head of HR"
+      ],
+      "text_excerpt": "Cleevio | AI-Powered Product Studio | Design, Build & Scale with Speed cursor text test hoj la la cursor circle texty text home Work services why us hiring! Blog Careers en English Czech German let’s talk home work services why us Blog careers en English Czech German let’s talk We use cookies Privacy Policy Preferences Accept Deny Privacy preferences Essential Always active These items are required to enable basic website functionality. Marketing These items are used to deliver advertising that is more relevant to you and your interests. They may also be used to limit the number of times you see an advertisement and measure the effectiveness of advertising campaigns. Personalization These items allow the website to remember choices you make and provide enhanced, more personal features. For example, a website may provide you with a contact to local sales executive relevant to your area by storing data about your current location. Analytics These items help the website operator understand how its website performs, how visitors interact with the site, and whether there may be technical issues. Allow all Confirm my choices Thank you! Your submission has been received! Oops! Something went wrong while submitting the form. San Francisco - Prague - VIENNA Proven builders. Faster with AI. We design, build and scale products with AI powered speed and a founder’s mindset let’s talk Our Achievements Play Reel 120 + Products developed 18 + Years on the market 50K + Five-star reviews 10+ ",
+      "text_chars": 22849,
+      "signals": {
+        "hiring": {
+          "careers_page_found": true,
+          "job_keyword_hits": 3
+        },
+        "tech": [
+          "gtm",
+          "react",
+          "webflow"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "cs",
+          "de",
+          "en"
+        ],
+        "category_tags": {
+          "saas_product": 3,
+          "martech": 5,
+          "consulting": 2,
+          "nonprofit_community": 2
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Chefclub",
+      "domain": "chefclub.tv",
+      "pages": [
+        {
+          "url": "https://chefclub.tv",
+          "final_url": "https://www.chefclub.tv/",
+          "http_status": 200,
+          "bytes": 453977,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 798,
+          "error": null
+        }
+      ],
+      "title": "Chefclub, food is fun ! | chefclub.tv",
+      "meta_description": "La marque des familles en cuisine",
+      "lang": "fr",
+      "h1": [
+        "Craquez pour nos indispensables en cuisine !"
+      ],
+      "h2": [
+        "Le meilleur cordon bleu",
+        "Chandeleur",
+        "L&#039;éplucheur",
+        "Vos prouesses",
+        "Co-créez avec Chefclub !",
+        "Chefclub à l&#039;école",
+        "Pierre Hermé et sa cultissime tarte 100% chocolat",
+        "Gaëtan Roussel de Louise Attaque et ses muffins choco",
+        "Maud du Meilleur Pâtissier et son Gâteau-cœur !",
+        "Devenez Creator !"
+      ],
+      "text_excerpt": "Menu Boutique Recettes Voir toutes les recettes “Chefclub ou le paradis pour les idées faciles, rapides et surtout originales !” Florence “Je ne me lasse pas de regarder vos recettes, merci pour ces délicieux moments !” Jérôme “Je ne suis pas une grande cuisinière et c est devenu un plaisir de cuisiner avec vous.” Élodie Left arrow Right arrow 0 1 2 Nos grands classiques Les meilleures crêpes Les meilleurs financiers Le meilleur soufflé au fromage La meilleure crème au caramel Poulet au curry : la recette traditionnelle Ils nous font confiance Nous avons à cœur de créer de nouveaux projets avec nos partenaires et de les faire rayonner sur nos plateformes ! Right arrow 0 1 2 3 4 5",
+      "text_chars": 688,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "ga",
+          "gtm",
+          "react",
+          "wordpress"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "de",
+          "de-de",
+          "en-gb",
+          "en-us",
+          "es-es",
+          "es-mx",
+          "fr",
+          "fr-fr",
+          "it",
+          "it-it",
+          "pt",
+          "pt-br",
+          "x-default"
+        ],
+        "category_tags": {
+          "saas_product": 1
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "My AskAI",
+      "domain": "myaskai.com",
+      "pages": [
+        {
+          "url": "https://myaskai.com",
+          "final_url": "https://myaskai.com",
+          "http_status": 200,
+          "bytes": 42570,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 391,
+          "error": null
+        }
+      ],
+      "title": "AI Customer Service Agent for Your Helpdesk | My AskAI",
+      "meta_description": "Deflect support requests by 75% with an AI customer service agent. Add to your existing live chat providers, like Intercom, Zendesk or Freshdesk. And start saving your team &amp; customers time.",
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "text_excerpt": "AI Customer Service Agent for Your Helpdesk | My AskAI",
+      "text_chars": 54,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "cloudflare",
+          "ga",
+          "gtm",
+          "hotjar",
+          "intercom"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "ar",
+          "bn",
+          "de",
+          "en",
+          "es",
+          "fr",
+          "hi",
+          "it",
+          "ja",
+          "nl",
+          "pl",
+          "pt",
+          "ru",
+          "uk",
+          "x-default",
+          "zh"
+        ],
+        "category_tags": {}
+      },
+      "insufficient_evidence": true,
+      "error": null
+    },
+    {
+      "company": "1SecondCopy",
+      "domain": "1secondcopy.com",
+      "pages": [
+        {
+          "url": "https://1secondcopy.com",
+          "final_url": "https://1secondcopy.com",
+          "http_status": 200,
+          "bytes": 37531,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 258,
+          "error": null
+        }
+      ],
+      "title": "1SecondCopy | SEO Content Writing To Order",
+      "meta_description": "We hired the top 1% of writers so you don&#x27;t have to. 1SecondCopy gets you high quality SEO articles &amp; blog posts in just 3 days.",
+      "lang": "en",
+      "h1": [
+        "Content writing, with a twist .",
+        "Replace expensive in-house teams &amp; unreliable freelancers with a flat monthly fee",
+        "Quit the busywork &amp; get back to growth",
+        "Affordable bulk pricing",
+        "Companies really love us",
+        "Frequently asked questions",
+        "Outsource your writing and build a reliable content machine."
+      ],
+      "h2": [],
+      "text_excerpt": "1SecondCopy | SEO Content Writing To Order 1SecondCopy has ceased operations as of March 1, 2026. Thank you for your support over the years. Content writing, with a twist . We hired the top 1% of writers so you don t have to. Get high quality articles & posts in just 3 days. Sign up 7-day money-back guarantee Featured on some of the world s biggest publications for our dedication to quality HOW IT WORKS Replace expensive in-house teams & unreliable freelancers with a flat monthly fee 1 No more hiring, managing, or dealing with writers We take care of all of the comms & busywork for you. 2 Extraordinarily simple to use Add your style guide and keyword(s) & we ll take care of the rest. 3 Completely risk free with unlimited revisions Don t love your content? We ll rewrite it until you do. Quit the busywork & get back to growth You re an affiliate site, agency, or SaaS company. Why waste your time hiring and managing when you could be focusing on growth? That s where we come in. Clean, simple, and easy to use. I love it! Tripling volume was a breeze, and quality has never been better. Zak Blake Former CTO, Scaling With Systems Affordable bulk pricing Our content scales with your business. Starter $0.09 /word For individuals or freelancers. No-risk 7 day trial. Up to 32,000 words Sign up 4 business days or less. Popular Bulk $0.08 /word For larger teams & affiliate websites over 32,000 words. No-risk 14 day trial. Up to 72,000 words. Sign up 3 business days or less. Enterprise $0.",
+      "text_chars": 3574,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "nextjs"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {
+          "saas_product": 2,
+          "agency_outsourcing": 1,
+          "martech": 4
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Acai Travel",
+      "domain": "acaitravel.com",
+      "pages": [
+        {
+          "url": "https://acaitravel.com",
+          "final_url": "https://www.acaitravel.com/",
+          "http_status": 200,
+          "bytes": 103669,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 408,
+          "error": null
+        },
+        {
+          "url": "https://www.acaitravel.com/about/careers",
+          "final_url": "https://www.acaitravel.com/about/careers",
+          "http_status": 200,
+          "bytes": 49040,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 129,
+          "error": null
+        }
+      ],
+      "title": "Acai Travel — AI agents for travel contact centers",
+      "meta_description": "Acai builds AI agents for travel contact centers. Scale your travel operations when, where and how you want — with 50% AHT reduction, 97% routing accuracy and 98% average CSAT.",
+      "lang": "en",
+      "h1": [
+        "AI agents for travel contact centers"
+      ],
+      "h2": [
+        "Have AI agents work the way your contact center works",
+        "Deployment options",
+        "Bring speed, accuracy and service excellence to your call centers",
+        "Made for every part of the travel industry",
+        "Modern-day solutions for age-old problems",
+        "Leading the way in AI for travel",
+        "Get started with full integrations",
+        "Schedule a demo!"
+      ],
+      "text_excerpt": "Acai Travel — AI agents for travel contact centers Introducing automated Schedule Change and Flight Disruption Management! Click to learn more → Introducing automated Schedule Change and Flight Disruption Management! Click to learn more → Introducing automated Schedule Change and Flight Disruption Management! Click to learn more → Introducing automated Schedule Change and Flight Disruption Management! Click to learn more → Introducing automated Schedule Change and Flight Disruption Management! Click to learn more → Introducing automated Schedule Change and Flight Disruption Management! Click to learn more → AI agents for travel contact centers Scale your travel operations when, where and how you want Request a demo See the products Trusted by Our products Have AI agents work the way your contact center works AI Travel Agent Assist human agents with critical information in seconds. Automate changes, cancellations and communications to facilitate fast and easy customer service. Learn more → AI Supervisor Assign every case to the right AI or human agent based on intent, complexity and customer sentiment. Monitor and assess agent performance to make quick optimizations or escalate to a human if necessary. Learn more → Our services Deployment options Three ways to put Acai to work, whichever way your stack is built. API integration Seamlessly plug in your existing systems to supercharge automation and instantly cut through manual tasks — no heavy lifting required. → Omnichannel/CR",
+      "text_chars": 4613,
+      "signals": {
+        "hiring": {
+          "careers_page_found": true,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "nextjs",
+          "react"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {
+          "saas_product": 5
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Deecoob",
+      "domain": "deecoob.com",
+      "pages": [
+        {
+          "url": "https://deecoob.com",
+          "final_url": "https://deecoob.com",
+          "http_status": 200,
+          "bytes": 119314,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 311,
+          "error": null
+        },
+        {
+          "url": "https://deecoob.com/company/",
+          "final_url": "https://deecoob.com/company/",
+          "http_status": 200,
+          "bytes": 112194,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 270,
+          "error": null
+        }
+      ],
+      "title": "Home - Deecoob",
+      "meta_description": "AI-powered data analytics for collective management organizations (CMO), licensing and copyright management.",
+      "lang": "en-us",
+      "h1": [
+        "what we do",
+        "OUR SOLUTION",
+        "MESLIS",
+        "in partnership with",
+        "who we are",
+        "clarity in practice",
+        "where we grow"
+      ],
+      "h2": [
+        "music. transparency. worldwide.",
+        "deecoob GmbH",
+        "Get in Touch"
+      ],
+      "text_excerpt": "Home - Deecoob Skip to content Home DevKev 2026-04-15T09:14:34+02:00 music. transparency. worldwide. what we do we make data visible We create transparency in the music market, ensuring that art isn’t just seen, but recognized and fairly compensated. for creative minds For collective management organizations (CMO) and anyone seeking clarity on the use of music and content worldwide. knowledge that empowers We structure complex data, make it understandable, and provide decision-ready insights – precise, reliable, and focused on what truly matters. discover our services OUR SOLUTION MESLIS The cloud-based data engine that makes creativity count. MESLIS – the M usic E vent S earch, L icensing & I nformation S ystem – detects, analyzes, and qualifies live music events worldwide. It supports collective management organizations in identifying unlicensed public music use efficiently — and turning it into fair licensing. get in touch in partnership with who we are We are the ones who turn data into clarity reliable, precise, impactful. As the analytical mind of the music market, we transform complexity into decision-ready insights. Our name, deecoob – short for deep content observation – reflects this role: helping collective management organizations make the right decisions, so that creativity is not only visible but valued. learn more about us clarity in practice Toni Falzetta Head of Department Licensing Events @ SUISA The valuable collaboration with deecoob enables us to optimall",
+      "text_chars": 10292,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 10
+        },
+        "tech": [
+          "gtm",
+          "wordpress"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en-us"
+        ],
+        "category_tags": {
+          "saas_product": 1,
+          "martech": 1,
+          "consulting": 1,
+          "hardware_iot": 1,
+          "nonprofit_community": 2
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Itrinity",
+      "domain": "itrinity.com",
+      "pages": [
+        {
+          "url": "https://itrinity.com",
+          "final_url": "https://itrinity.com",
+          "http_status": 200,
+          "bytes": 360017,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 839,
+          "error": null
+        },
+        {
+          "url": "https://itrinity.com/join-us/",
+          "final_url": "https://itrinity.com/join-us/",
+          "http_status": 200,
+          "bytes": 326429,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 215,
+          "error": null
+        }
+      ],
+      "title": "Home - itrinity",
+      "meta_description": "",
+      "lang": "en-us",
+      "h1": [
+        "Build. Acquire. Repeat.",
+        "Why you should sell to us?",
+        "Dream exit is possible",
+        "Hear it from the founders"
+      ],
+      "h2": [
+        "Fast growing product factory",
+        "Our portfolio",
+        "We are looking for top talent"
+      ],
+      "text_excerpt": "Home - itrinity Skip to content Skip to footer Close Say Hello [email protected] Join Our Team Career Simple & fast process Sell to us Build. Acquire. Repeat. itrinity runs a fast-growing portfolio of highly profitable SaaS businesses with millions of users across the globe. 🌐 We’ve been profitable since day 1 and have grown by over 30% in EBITDA (YoY) for the last 10 years. who we are Fast growing product factory Our vision is to build and operate an ever-growing portfolio of highly profitable SaaS businesses as efficiently as possible. We aim to fulfill the unreached potential of each product and continue to expand the portfolio with new acquisitions. Acquired business 8 0 Years in market 8 0 8 0 Total ARR$ 8 0 8 0 M+ Users worldwide 8 0 M+ The story begins in 2014 with the introduction of KWFinder , read our full story: Read full story What we've built and acquired Our portfolio Our portfolio Our SaaS portfolio currently boasts seven fast-growing and highly profitable businesses with millions of users across the globe. Product Type Acquired Effective SEO Tools for Busy People. Bootstrapped 2014 Reliable & Affordable Email Verification Service 2018 The World's Leading Uptime Monitoring Service 2019 Email Warmup & Health Monitoring Service 2021 All-in-One Geo Targeting Platform 2023 Digital Guidebooks that Reduce Questions 2024 Boosting Conversions Through Urgency & Deadlines 2024 Find Easy-to-rank Keywords Based on Weak Spots in SERP Sold in 2025 Status Page Aggregator 2026",
+      "text_chars": 13583,
+      "signals": {
+        "hiring": {
+          "careers_page_found": true,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "cloudflare",
+          "wordpress"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en-us"
+        ],
+        "category_tags": {
+          "saas_product": 4,
+          "martech": 4
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "Woflow",
+      "domain": "woflow.com",
+      "pages": [
+        {
+          "url": "https://woflow.com",
+          "final_url": "https://www.woflow.com/",
+          "http_status": 200,
+          "bytes": 372755,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 472,
+          "error": null
+        },
+        {
+          "url": "https://www.woflow.com/contact",
+          "final_url": "https://www.woflow.com/contact",
+          "http_status": 200,
+          "bytes": 41696,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 175,
+          "error": null
+        }
+      ],
+      "title": "Custom AI Agents for Complex Operations — Woflow",
+      "meta_description": "Woflow builds and deploys custom AI agents for complex enterprise operations, with tested skills, production controls, and auditability built in.",
+      "lang": "en",
+      "h1": [
+        "Custom agents for your most complex operations"
+      ],
+      "h2": [
+        "An agent platform for scaled operations",
+        "Introducing Deep Skills",
+        "What changes with Woflow",
+        "AI transformations require careful deployment",
+        "Live agents across critical operations",
+        "Work with a trusted AI partner",
+        "Frequently asked questions",
+        "Bring us your most pressing operation"
+      ],
+      "text_excerpt": "Custom AI Agents for Complex Operations — Woflow Woflow Platform Platform Overview Agents for complex operations Agent skills Deep Skills Featured Tested skills for document and data work Conversation Skills Tested skills for calls and messages Skills MCP Use Woflow skills from external AI tools Deployments Customers Dark Sign in Get a demo Woflow launches Deep Skills Custom agents for your most complex operations Woflow helps enterprises build and deploy high-trust and auditable AI. Get a demo See the platform Trusted in production by Why Woflow Woflow deploys agents where accuracy is non-negotiable : enterprise volume, complex systems, and edge cases. Each agent uses Skills built from your procedures, tested against real cases , with your team in control of every run. That’s why unicorns and Fortune 500 companies trust Woflow to detect fraudulent images. verify healthcare documents. audit products for compliance. adjudicate flagged fraud cases. extract data from sensitive documents. migrate transaction records. conduct verification calls. build evaluation sets. Platform An agent platform for scaled operations Purpose-built for custom implementations that help enterprises automate complex work without losing control. New agent Capabilities Create agent Equip the agent Add capabilities for document, data, call, and message work. Connect company context Build on your existing systems, knowledge, cases, and tools. Scale confidently Measure performance against known outcomes bef",
+      "text_chars": 8005,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "ga",
+          "gtm",
+          "nextjs",
+          "react",
+          "shopify"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {
+          "saas_product": 6,
+          "martech": 4,
+          "education": 2
+        }
+      },
+      "insufficient_evidence": false,
+      "error": null
+    },
+    {
+      "company": "RootWise",
+      "domain": "rootwise.io",
+      "pages": [
+        {
+          "url": "https://rootwise.io",
+          "final_url": "https://rootwise.io",
+          "http_status": 200,
+          "bytes": 3650,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 191,
+          "error": null
+        }
+      ],
+      "title": "RootWise — The Operating System for Your Land",
+      "meta_description": "RootWise is your personal garden companion — identify plants, diagnose problems with AI photo analysis, and get weather-aware care alerts.",
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "text_excerpt": "RootWise — The Operating System for Your Land",
+      "text_chars": 45,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 0
+        },
+        "tech": [],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {}
+      },
+      "insufficient_evidence": true,
+      "error": null
+    }
+  ],
+  "prospects": [
+    {
+      "company": "Nonexistent Domain SRL",
+      "domain": "nonexistent-domain-xyz123.ro",
+      "pages": [
+        {
+          "url": "https://nonexistent-domain-xyz123.ro",
+          "final_url": null,
+          "http_status": null,
+          "bytes": 0,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 22,
+          "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        }
+      ],
+      "title": "",
+      "meta_description": "",
+      "lang": null,
+      "h1": [],
+      "h2": [],
+      "text_excerpt": "",
+      "text_chars": 0,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 0
+        },
+        "tech": [],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [],
+        "category_tags": {}
+      },
+      "insufficient_evidence": true,
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "company": "Segment JS Shell",
+      "domain": "app.segment.com",
+      "pages": [
+        {
+          "url": "https://app.segment.com",
+          "final_url": "https://app.segment.com",
+          "http_status": 200,
+          "bytes": 1971,
+          "retrieved_at": "2026-08-28T16:20:15Z",
+          "elapsed_ms": 765,
+          "error": null
+        }
+      ],
+      "title": "Segment",
+      "meta_description": "",
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "text_excerpt": "Segment",
+      "text_chars": 7,
+      "signals": {
+        "hiring": {
+          "careers_page_found": false,
+          "job_keyword_hits": 0
+        },
+        "tech": [
+          "react"
+        ],
+        "location": {
+          "romania": false,
+          "cities": []
+        },
+        "size_hint": {
+          "number": null,
+          "band": null
+        },
+        "languages": [
+          "en"
+        ],
+        "category_tags": {}
+      },
+      "insufficient_evidence": true,
+      "error": null
+    }
+  ],
+  "refused": {
+    "customers": [],
+    "prospects": []
+  }
+}

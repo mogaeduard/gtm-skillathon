@@ -1,0 +1,17 @@
+rank | company | domain | fit | verdict | top evidence
+1    | HyperSense Software      | hypersense-software.com    | 84   | fit                  | https://hypersense-software.com (2026-08-28T16:20:16Z)
+2    | Zitec                    | zitec.com                  | 84   | fit                  | https://zitec.com (2026-08-28T16:20:16Z)
+3    | UiPath Bucharest         | uipath.com                 | 75   | maybe                | https://www.uipath.com/ (2026-08-28T16:20:16Z)
+4    | Axway România            | axway.com                  | 65   | maybe                | https://www.axway.com/en (2026-08-28T16:20:16Z)
+5    | Plant an App Romania     | plantanapp.com             | 52   | maybe                | https://www.plantanapp.com:443/ (2026-08-28T16:20:16Z)
+6    | mindit.io                | mindit.io                  | 44   | unfit                | https://mindit.io (2026-08-28T16:20:16Z)
+7    | ThemeIsle                | themeisle.com              | 40   | unfit                | https://themeisle.com (2026-08-28T16:20:16Z)
+8    | Omniconvert              | omniconvert.com            | 30   | unfit                | https://www.omniconvert.com/ (2026-08-28T16:20:16Z)
+9    | Romanian Software        | sdworx.ro                  | 25   | unfit                | https://www.sdworx.ro/ro-ro (2026-08-28T16:20:16Z)
+10   | EveryMatrix Bucuresti    | everymatrix.com            | 12   | unfit                | https://everymatrix.com (2026-08-28T16:20:16Z)
+ICP n=2 confidence=insufficient (n<5 with evidence)
+2 prospects with fit >= 80
+demo/output/evals/small-icp/evidence.json
+demo/output/evals/small-icp/fit.json
+demo/output/evals/small-icp/icp-actual.md
+demo/output/evals/small-icp/prospect-fit.md

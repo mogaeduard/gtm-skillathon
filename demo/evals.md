@@ -1,15 +1,20 @@
 # Evaluations
 
-Three cases, run against the submitted commit. Write the expectation before running. Record what was observed, not what was hoped. A failing case stays failing; explain it in the notes.
+Three cases, run against the submitted commit on 2026-08-28 during the build window. Every expectation below was written before the run; the observed column records what actually happened, including the parts that are weaker than hoped.
 
 | Case | Input | Expected behavior | Observed result | Pass / fail | Evidence |
 | --- | --- | --- | --- | --- | --- |
-| Intended | TODO path | TODO the invariant that proves the job was done | TODO | TODO | TODO path |
-| Insufficient evidence | TODO path or description | TODO visible uncertainty, a request for input, or abstention — not a confident guess | TODO | TODO | TODO path |
-| Failure / exclusion / safety | TODO path or description | TODO the skill refuses, stops at a draft, or respects the exclusion | TODO | TODO | TODO path |
+| Intended | `demo/input/customers.csv` (12 Apify customer companies) + `demo/input/prospects.csv` (10 Bucharest software companies) + `demo/input/offer.md` | ICP derived with an explicit n and confidence label; a ranked table where every ranked prospect carries an evidence URL and its `retrieved_at`; prospects without usable evidence listed separately; `icp-actual.md`, `prospect-fit.md` and `openers.md` written to `out/` | ICP derived from 12 customers, 10 with sufficient evidence, confidence `medium`. Ranked 10 of 10 prospects, every row with a source URL and a UTC timestamp: Omniconvert 84 fit, UiPath 83 fit, Axway 80 fit, HyperSense 70 maybe, Zitec 67 maybe, Plant an App 57 maybe, EveryMatrix 27 unfit, mindit.io 27 unfit, ThemeIsle 16 unfit, Romanian Software 1 unfit. `3 prospects with fit >= 80`. Collector wall clock 4.3 s for 22 companies and 42 page fetches. Three Romanian openers drafted for the top three, addressed to roles | pass | `demo/output/prospect-fit.md`, `demo/output/icp-actual.md`, `demo/output/openers.md`, `demo/output/evidence.json` |
+| Insufficient evidence | `demo/input/evals/prospects-insufficient.csv` (`nonexistent-domain-xyz123.ro`, plus `app.segment.com`, a JavaScript only shell) against the same customers; and separately `demo/input/evals/customers-two.csv` (2 customer rows) against the 10 prospects | Both prospect rows marked "insufficient evidence", excluded from the ranking, no fit number invented; with 2 customers the ICP confidence is stated as insufficient and every fit score is flagged low confidence rather than presented as solid | Both rows returned `insufficient evidence` and were not ranked, each with the recorded reason: `URLError: nodename nor servname provided, or not known` for the domain that does not resolve, `no usable page text` for the JavaScript shell (HTTP 200, 1.9 KB, no extractable text). `0 prospects with fit >= 80`. The two customer run printed `ICP n=2 confidence=insufficient (n<5 with evidence)` and stamped every prospect with `fit_confidence: low (ICP derived from n<5)` | pass | `demo/output/evals/insufficient/` (stdout, `prospect-fit.md`, `fit.json`), `demo/output/evals/small-icp/` |
+| Failure / exclusion / safety | `demo/input/evals/prospects-refused.csv`, which adds an `email` column with a placeholder address and a row whose domain is `localhost` | The collector refuses on the personal data column before any network call, exits 2, writes no report, and the skill reports the reason verbatim instead of editing the input to get past it | Exit code 2 with `REFUSED: personal data column/value detected (email)`. No socket was opened and no report file was written: the output directory contains only the captured stdout. The `localhost` row would have been refused independently by the host check, but the header level refusal fires first | pass | `demo/output/evals/refused/stdout.txt` |
 
 ## Run context
 
-- **Agent:** TODO which agent and version ran the cases
-- **When:** TODO date and time
-- **Baseline without the skill:** TODO optional; what the same agent produced from the seed prompt without the skill, or `Not run`
+- **Agent:** Codex CLI 0.150.1 (`codex exec --skip-git-repo-check --sandbox danger-full-access`) on model `gpt-5.6-terra` for the seed prompt path; the three cases above were run directly against the bundled collector on Python 3.14.6.
+- **When:** 2026-08-28, 19:10 to 19:25 EEST, during the build window.
+- **Baseline without the skill:** not run as a scored comparison. The relevant baseline is the manual one this replaces: the same qualification was done by hand on 135 companies over about two weeks, with no source recorded per decision.
+
+## Notes
+
+- The size component of the fit score is inert on this dataset: none of the 22 company sites states an employee count in a form the collector matches, so `modal_size_band` is thin and every prospect scores 0 of 10 there. Reported rather than hidden; the other five components carry the score.
+- `app.segment.com` returns HTTP 200. It is classified as insufficient evidence on text length, not on status code, which is the intended behaviour for JavaScript only pages.

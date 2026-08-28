@@ -1,0 +1,9 @@
+rank | company | domain | fit | verdict | top evidence
+1    | Nonexistent Domain SRL   | nonexistent-domain-xyz123. | -    | insufficient evidence | URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+2    | Segment JS Shell         | app.segment.com            | -    | insufficient evidence | https://app.segment.com (2026-08-28T16:20:15Z)
+ICP n=10 confidence=medium
+0 prospects with fit >= 80
+demo/output/evals/insufficient/evidence.json
+demo/output/evals/insufficient/fit.json
+demo/output/evals/insufficient/icp-actual.md
+demo/output/evals/insufficient/prospect-fit.md
