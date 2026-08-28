@@ -1,38 +1,32 @@
-# DRAFT
+DRAFT
 Subject: ad/01 x Apify
+Hello CTO,
+“The tech studio that builds the future of food retail.” https://www.ad01.com/ Retrieved 2026-08-28T17:00:32Z.
 
-To the CTO,
+That focus on solving real challenges prompted me to write.
 
-“The tech studio that builds the future of food retail.” Source: https://www.ad01.com/ Retrieved: 2026-08-28T16:40:40Z
+Apify describes itself as the largest marketplace of trusted tools for AI, built for teams that need real time web data.
 
-That focus on food retail technology prompted me to write.
+Would it be useful to compare a small web data workflow for your team?
 
-Apify offers cloud run tools for teams that need real time web data without maintaining scraping infrastructure.
-
-Would a short example of monitoring retail product and competitor data be useful?
-
-# DRAFT
+DRAFT
 Subject: Keysight x Apify
+Hello CTO,
+“Built for every engineer at every stage of testing.” https://www.keysight.com/us/en/home.html Retrieved 2026-08-28T17:00:33Z.
 
-To the CTO,
+That statement about engineers and testing prompted me to write.
 
-“Explore Our New Signal Analyzers Learn to Innovate Chip Design Hands-on semiconductor labs in IC design, wafer-test, and photonic IC measurement.” Source: https://www.keysight.com/us/en/home.html Retrieved: 2026-08-28T16:40:40Z
+The tools are called Actors. They run in the cloud, so the customer's team does not maintain scraping infrastructure.
 
-Your public work around chip design and measurement prompted me to write.
+Would a short look at an Actor be useful for your team?
 
-Apify offers cloud run tools for teams that need real time web data without maintaining scraping infrastructure.
-
-Could market and technical web data collection help one of those research workflows?
-
-# DRAFT
+DRAFT
 Subject: Work in Finland x Apify
+Hello director,
+“Date 25.09.2026 Newcomer Information Planning to move to the Helsinki capital region?” https://www.workinfinland.com:443/en/ Retrieved 2026-08-28T17:00:32Z.
 
-To the director,
+That public information for newcomers prompted me to write.
 
-“Finland Works Finnish employers meet talents seeking new opportunities.” Source: https://www.workinfinland.com:443/en/ Retrieved: 2026-08-28T16:40:40Z
+The publicly listed use cases cover feeding AI models, e commerce, product development, automation, competitive intelligence, social media, market research and lead generation.
 
-That work connecting employers and talent prompted me to write.
-
-Apify offers cloud run tools for teams that need real time web data without maintaining scraping infrastructure.
-
-Would it be useful to discuss a small workflow for gathering public market or employer signals?
+Would it be useful to discuss a small web data workflow?

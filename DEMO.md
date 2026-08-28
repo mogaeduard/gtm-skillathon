@@ -53,7 +53,7 @@ Open [`demo/output/discovery/prospect-fit.md`](demo/output/discovery/prospect-fi
 
 Say: "Same skill, no prospect list at all. We pointed it at the public sponsor page of DevTalks, a Romanian developer conference. It read the page, kept the company links, dropped the directories and the social networks, and scored what it found. That is the sourcing step: give it a sponsor page, a partner page, a portfolio page, and it produces the list, the scores and the drafts in the same run."
 
-The source URL, the HTTP status and the retrieval time of that page are in `demo/output/discovery/discovery.json`. Discovery costs one extra HTTP request: this exact run took 67 seconds end to end on a clean Codex profile from a fresh clone, 9 companies found, 6 ranked, 3 marked insufficient evidence, 3 openers drafted.
+The source URL, the HTTP status and the retrieval time of that page are in `demo/output/discovery/discovery.json`. Discovery costs one extra HTTP request: this exact run took 91 seconds end to end on a clean Codex profile from a fresh clone of the submitted commit, 9 companies found, 6 ranked, 3 marked insufficient evidence, 3 openers drafted.
 
 ## Close — 5 seconds
 
