@@ -1,11 +1,11 @@
 {
   "meta": {
-    "started": "2026-08-28T16:31:14Z",
-    "finished": "2026-08-28T16:31:17Z",
+    "started": "2026-08-28T16:57:55Z",
+    "finished": "2026-08-28T16:57:59Z",
     "budget_s": 20.0,
     "version": "1.0",
     "python": "3.14.6",
-    "elapsed_s": 3.9,
+    "elapsed_s": 3.58,
     "input_sources": {
       "customers": "demo/input/customers.csv",
       "prospects": "demo/input/prospects.csv"
@@ -21,8 +21,8 @@
           "final_url": "https://www.intercom.com/",
           "http_status": 200,
           "bytes": 1544603,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 1102,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 1057,
           "error": null
         },
         {
@@ -30,8 +30,8 @@
           "final_url": "https://fin.ai/about",
           "http_status": 200,
           "bytes": 1572864,
-          "retrieved_at": "2026-08-28T16:31:15Z",
-          "elapsed_ms": 512,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 671,
           "error": null
         }
       ],
@@ -90,9 +90,9 @@
           "url": "https://mindvalley.com",
           "final_url": "https://www.mindvalley.com/",
           "http_status": 200,
-          "bytes": 1168808,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 845,
+          "bytes": 1168809,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 842,
           "error": null
         }
       ],
@@ -156,8 +156,8 @@
           "final_url": "https://www.mavenagi.com/",
           "http_status": 200,
           "bytes": 157876,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 691,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 489,
           "error": null
         },
         {
@@ -165,8 +165,8 @@
           "final_url": "https://www.mavenagi.com/careers",
           "http_status": 200,
           "bytes": 120874,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 220,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 137,
           "error": null
         }
       ],
@@ -227,8 +227,8 @@
           "final_url": "https://cleevio.com",
           "http_status": 200,
           "bytes": 182682,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 76,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 168,
           "error": null
         },
         {
@@ -236,8 +236,8 @@
           "final_url": "https://cleevio.com/careers",
           "http_status": 200,
           "bytes": 108604,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 137,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 110,
           "error": null
         }
       ],
@@ -303,8 +303,8 @@
           "final_url": "https://www.chefclub.tv/",
           "http_status": 200,
           "bytes": 453977,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 621,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 530,
           "error": null
         }
       ],
@@ -378,8 +378,8 @@
           "final_url": "https://myaskai.com",
           "http_status": 200,
           "bytes": 42570,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 1302,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 374,
           "error": null
         }
       ],
@@ -442,8 +442,8 @@
           "final_url": "https://1secondcopy.com",
           "http_status": 200,
           "bytes": 37531,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 278,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 273,
           "error": null
         }
       ],
@@ -499,8 +499,8 @@
           "final_url": "https://www.acaitravel.com/",
           "http_status": 200,
           "bytes": 103669,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 410,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 357,
           "error": null
         },
         {
@@ -508,8 +508,8 @@
           "final_url": "https://www.acaitravel.com/about/careers",
           "http_status": 200,
           "bytes": 49040,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 197,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 148,
           "error": null
         }
       ],
@@ -567,8 +567,8 @@
           "final_url": "https://deecoob.com",
           "http_status": 200,
           "bytes": 119314,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 305,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 345,
           "error": null
         },
         {
@@ -576,8 +576,8 @@
           "final_url": "https://deecoob.com/company/",
           "http_status": 200,
           "bytes": 112194,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 252,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 416,
           "error": null
         }
       ],
@@ -639,18 +639,18 @@
           "url": "https://itrinity.com",
           "final_url": "https://itrinity.com",
           "http_status": 200,
-          "bytes": 360008,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 809,
+          "bytes": 360013,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 762,
           "error": null
         },
         {
           "url": "https://itrinity.com/join-us/",
           "final_url": "https://itrinity.com/join-us/",
           "http_status": 200,
-          "bytes": 326429,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 234,
+          "bytes": 326430,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 237,
           "error": null
         }
       ],
@@ -707,8 +707,8 @@
           "final_url": "https://www.woflow.com/",
           "http_status": 200,
           "bytes": 372755,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 467,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 448,
           "error": null
         },
         {
@@ -716,8 +716,8 @@
           "final_url": "https://www.woflow.com/contact",
           "http_status": 200,
           "bytes": 41696,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 234,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 283,
           "error": null
         }
       ],
@@ -780,8 +780,8 @@
           "final_url": "https://rootwise.io",
           "http_status": 200,
           "bytes": 3650,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 466,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 495,
           "error": null
         }
       ],
@@ -825,8 +825,8 @@
           "final_url": "https://www.uipath.com/",
           "http_status": 200,
           "bytes": 727652,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 504,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 322,
           "error": null
         },
         {
@@ -834,8 +834,8 @@
           "final_url": "https://www.uipath.com/careers",
           "http_status": 200,
           "bytes": 501371,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 222,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 324,
           "error": null
         }
       ],
@@ -896,8 +896,8 @@
           "final_url": "https://zitec.com",
           "http_status": 200,
           "bytes": 205068,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 161,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 144,
           "error": null
         },
         {
@@ -905,8 +905,8 @@
           "final_url": "https://zitec.com/about/",
           "http_status": 200,
           "bytes": 178995,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 86,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 78,
           "error": null
         }
       ],
@@ -974,8 +974,8 @@
           "final_url": "https://everymatrix.com",
           "http_status": 200,
           "bytes": 348366,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 247,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 326,
           "error": null
         },
         {
@@ -983,8 +983,8 @@
           "final_url": "https://everymatrix.com/about-us/",
           "http_status": 200,
           "bytes": 209839,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 116,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 121,
           "error": null
         }
       ],
@@ -1046,8 +1046,8 @@
           "final_url": "https://www.omniconvert.com/",
           "http_status": 200,
           "bytes": 284685,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 290,
+          "retrieved_at": "2026-08-28T16:57:55Z",
+          "elapsed_ms": 304,
           "error": null
         },
         {
@@ -1055,8 +1055,8 @@
           "final_url": "https://www.omniconvert.com/explore/",
           "http_status": 200,
           "bytes": 416793,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 119,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 83,
           "error": null
         }
       ],
@@ -1122,8 +1122,8 @@
           "final_url": "https://www.sdworx.ro/ro-ro",
           "http_status": 200,
           "bytes": 231325,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 868,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 878,
           "error": null
         },
         {
@@ -1131,8 +1131,8 @@
           "final_url": "https://www.sdworx.ro/ro-ro/despre-sd-worx",
           "http_status": 200,
           "bytes": 1196049,
-          "retrieved_at": "2026-08-28T16:31:15Z",
-          "elapsed_ms": 276,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 296,
           "error": null
         }
       ],
@@ -1196,8 +1196,8 @@
           "final_url": "https://www.axway.com/en",
           "http_status": 200,
           "bytes": 168623,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 1023,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 904,
           "error": null
         },
         {
@@ -1205,8 +1205,8 @@
           "final_url": "https://www.axway.com/en/company/careers",
           "http_status": 200,
           "bytes": 122893,
-          "retrieved_at": "2026-08-28T16:31:15Z",
-          "elapsed_ms": 498,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 356,
           "error": null
         }
       ],
@@ -1268,8 +1268,8 @@
           "final_url": "https://themeisle.com",
           "http_status": 200,
           "bytes": 254191,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 71,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 77,
           "error": null
         },
         {
@@ -1277,8 +1277,8 @@
           "final_url": "https://themeisle.com/about-us/",
           "http_status": 200,
           "bytes": 225192,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 113,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 164,
           "error": null
         }
       ],
@@ -1343,8 +1343,8 @@
           "final_url": "https://mindit.io",
           "http_status": 200,
           "bytes": 675916,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 549,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 462,
           "error": null
         },
         {
@@ -1352,8 +1352,8 @@
           "final_url": "https://mindit.io/careers/",
           "http_status": 200,
           "bytes": 429082,
-          "retrieved_at": "2026-08-28T16:31:15Z",
-          "elapsed_ms": 526,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 505,
           "error": null
         }
       ],
@@ -1428,8 +1428,8 @@
           "final_url": "https://www.plantanapp.com:443/",
           "http_status": 200,
           "bytes": 81087,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 2363,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 2179,
           "error": null
         },
         {
@@ -1437,8 +1437,8 @@
           "final_url": "https://www.plantanapp.com:443/about-us/contact-us",
           "http_status": 200,
           "bytes": 97545,
-          "retrieved_at": "2026-08-28T16:31:16Z",
-          "elapsed_ms": 1038,
+          "retrieved_at": "2026-08-28T16:57:58Z",
+          "elapsed_ms": 917,
           "error": null
         }
       ],
@@ -1504,8 +1504,8 @@
           "final_url": "https://hypersense-software.com",
           "http_status": 200,
           "bytes": 550964,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 443,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 441,
           "error": null
         },
         {
@@ -1513,8 +1513,8 @@
           "final_url": "https://hypersense-software.com/services/ai-development-company",
           "http_status": 200,
           "bytes": 434425,
-          "retrieved_at": "2026-08-28T16:31:14Z",
-          "elapsed_ms": 321,
+          "retrieved_at": "2026-08-28T16:57:56Z",
+          "elapsed_ms": 255,
           "error": null
         }
       ],
