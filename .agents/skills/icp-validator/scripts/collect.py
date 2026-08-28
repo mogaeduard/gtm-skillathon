@@ -706,6 +706,38 @@ def _shares(d, limit=4):
     items = sorted(d.items(), key=lambda kv: -kv[1])[:limit]
     return ", ".join("%s %s" % (k, _pct(v)) for k, v in items)
 
+def write_openers_input(icp, ranked, companies_by_domain, offer_path, outdir):
+    """Slim file so the drafting step never has to read the big JSON."""
+    offer_name, offer_lines = "the offer", []
+    try:
+        with open(offer_path, "r", encoding="utf-8") as f:
+            raw = [ln.strip() for ln in f if ln.strip()]
+        if raw:
+            first = raw[0].lstrip("# ").strip()
+            offer_name = first.split(":", 1)[1].strip() if ":" in first else first
+            offer_lines = [ln for ln in raw[1:] if not ln.lower().startswith("surse")][:4]
+    except Exception:
+        pass
+    top = []
+    for r in ranked:
+        if r.get("fit") is None or len(top) >= 3:
+            continue
+        c = companies_by_domain.get(r["domain"]) or {}
+        excerpt = c.get("text_excerpt") or ""
+        quotes = [q.strip() for q in re.split(r"(?<=[.!?])\s+", excerpt) if 40 <= len(q.strip()) <= 180][:3]
+        te = r.get("top_evidence") or {}
+        top.append({"company": r["company"], "domain": r["domain"], "fit": r["fit"],
+                    "evidence_url": te.get("url"), "retrieved_at": te.get("retrieved_at"),
+                    "title": (c.get("title") or "")[:140],
+                    "quote_candidates": quotes,
+                    "signals": {"hiring": bool(((c.get("signals") or {}).get("hiring") or {}).get("careers_page_found")), "romania": bool(((c.get("signals") or {}).get("location") or {}).get("romania"))}})
+    path = os.path.join(outdir, "openers-input.json")
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({"offer_name": offer_name, "offer_lines": offer_lines,
+                   "icp_confidence": icp.get("icp_confidence"), "top3": top}, f,
+                  ensure_ascii=False, indent=2)
+    return path
+
 def write_reports(icp, ranked, refused, outdir, meta):
     """Write the two deterministic markdown reports. The agent only adds openers."""
     icp_path = os.path.join(outdir, "icp-actual.md")
@@ -789,6 +821,7 @@ def main():
     ap.add_argument("--max-prospects", type=int, default=12)
     ap.add_argument("--budget", type=float, default=20.0)
     ap.add_argument("--selftest", action="store_true")
+    ap.add_argument("--offer", default="demo/input/offer.md")
     a = ap.parse_args()
 
     if a.selftest:
@@ -856,9 +889,12 @@ def main():
     with open(fit_path, "w", encoding="utf-8") as f:
         json.dump({"icp": icp, "prospects": ranked}, f, ensure_ascii=False, indent=2)
 
+    by_domain = dict((c["domain"], c) for c in prospects)
     icp_md, fit_md = write_reports(icp, ranked,
                                    {"customers": cust_ref, "prospects": pros_ref}, a.out,
                                    {"finished": utcnow()})
+
+    op_in = write_openers_input(icp, ranked, by_domain, a.offer, a.out)
 
     print("rank | company | domain | fit | verdict | top evidence")
     for i, r in enumerate(ranked, 1):
@@ -873,6 +909,7 @@ def main():
     print(fit_path)
     print(icp_md)
     print(fit_md)
+    print(op_in)
     return 0
 
 if __name__ == "__main__":

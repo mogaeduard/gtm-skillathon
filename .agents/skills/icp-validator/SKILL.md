@@ -22,23 +22,24 @@ from the prompt, ask for it and stop.
    If Codex asks to allow network access, approve it. If the script prints `NO NETWORK`
    (exit 3), re-run the same command once network is approved. If it prints `REFUSED`
    (exit 2), report the reason verbatim and stop. Never edit the input to get past a refusal.
-3. Read `out/fit.json` only. Do not open `out/evidence.json` unless a step below needs a
-   quote from it: it is large and the run has a 60 second budget. Trust the numbers in
-   `fit.json`: never recompute, adjust or explain away a fit score.
-4. The collector has already written `out/icp-actual.md` and `out/prospect-fit.md`. Never
-   rewrite them, never copy their tables into chat and never open them: they are final.
-5. Write `out/openers.md`, at most 12 lines per draft. For the top three prospects by fit,
-   draft one opener each, addressed to a role such as fondator, CTO or director, never to a
-   person's name. Subject: the company name, then ` x `, then the offer name from the first
-   line of the offer file. Body, four short paragraphs: a concrete hook quoting one fact from
-   that company's own page in `fit.json` with its URL, one sentence on why that fact prompted
-   writing, one sentence on what the offer is taken from the offer file, one small question.
-   Mark each draft `DRAFT`. Use no dashes of any kind. Skip AI tell phrases such as
-   "in peisajul actual", "in era digitala", "sper ca acest email va gaseste bine".
-6. Print, in this order and nothing else: the ranked table exactly as the collector printed
-   it, the five line summary of the actual ICP read from `out/icp-actual.md` (business line,
-   Romania share, hiring share, size band, top tech), the count of prospects with fit 80 or
-   more, and the four output paths. Keep the whole reply under 40 lines.
+3. Print the ranked table the collector just printed, exactly as it printed it, before
+   doing anything else. This is the visible result and it must not wait for step 5.
+4. Read `out/openers-input.json` only. It is small and holds everything the drafts need:
+   the offer name, the offer lines, and the top three companies with quote candidates,
+   evidence URL and retrieval time. Do not open `out/evidence.json` or `out/fit.json`:
+   they are large and the run has a 60 second budget. The collector has already written
+   `out/icp-actual.md` and `out/prospect-fit.md`; never rewrite them and never open them.
+5. Write `out/openers.md`, at most 10 lines per draft, one draft per company in `top3`.
+   Address a role such as fondator, CTO or director, never a person's name. Subject: the
+   company name, then ` x `, then `offer_name`. Body, four short paragraphs: one of the
+   `quote_candidates` quoted verbatim with its `evidence_url` and `retrieved_at`, one
+   sentence on why that prompted writing, one sentence on the offer taken from
+   `offer_lines`, one small question. Mark each draft `DRAFT`. Use no dashes of any kind.
+   Skip AI tell phrases such as "in peisajul actual", "in era digitala", "sper ca acest
+   email va gaseste bine".
+6. Close with the five line ICP summary read from `out/icp-actual.md` (business line,
+   Romania share, hiring share, size band, top tech), the count of prospects with fit 80
+   or more, and the output paths. Keep the whole reply under 40 lines.
 
 ## Rules
 

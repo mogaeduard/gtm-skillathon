@@ -1,1 +1,1 @@
-$icp-validator Use demo/input/customers.csv as our customers, demo/input/prospects.csv as the prospects, and demo/input/offer.md as the offer. Run the collector, then print the ranked fit table, the actual ICP in five lines, and how many prospects have fit 80 or more. Full reports go to out/.
+$icp-validator Use demo/input/customers.csv as our customers, demo/input/prospects.csv as the prospects, and demo/input/offer.md as the offer. Print the ranked fit table as soon as the collector prints it, then draft the top three openers. Full reports go to out/.
