@@ -36,6 +36,8 @@ Say: "This is the part nobody has. Left column is what Apify says about itself, 
 
 Say: "Apify's real customer base is SaaS products and martech, hiring, English language sites, mostly React and Google Tag Manager. Omniconvert scores 84 because it matches on business line, hiring and language, and it loses points on stack overlap. Every one of those numbers has a URL and a timestamp beside it."
 
+Say, pointing at the bottom of the table: "And look down here. Romanian Software scores one. It tells you why: payroll instead of software, not hiring, and a site only in Romanian while every customer we closed has an English site. EveryMatrix scores twenty seven, gaming, and nobody in our customer list is gaming. That is the useful part. It does not only tell you who to call. It tells you who to stop wasting time on, and why."
+
 **Evidence:** every ranked row in `prospect-fit.md` carries the evidence URL and its `retrieved_at`. Prospects whose page could not be read are listed separately and never given a score.
 
 **Fallback output was produced:** 2026-08-28 at 20:09 EEST, by running this exact seed prompt in Codex CLI 0.150.1 from a fresh `git clone` of the submitted commit, on a clean Codex profile holding nothing but the login. Measured end to end: 68 seconds, of which the collector took 4 and the ranked table appeared first. Five clean profile runs of this prompt tonight took 80, 115, 86, 68 and 74 seconds, median 80; all of the variation is model writing time, and the ranked table was on screen within the first 20 seconds in every one. The last one, at 20:18, reproduced every number in this run sheet.
