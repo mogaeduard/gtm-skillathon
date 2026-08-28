@@ -10,7 +10,7 @@ Fallback at ~60 seconds: open [`demo/output/prospect-fit.md`](demo/output/prospe
 
 **Who has the problem:** the partnerships lead at VIP, a Romanian student organization that signs company partners. They qualified 135 companies by eye, on a spreadsheet, over two weeks.
 
-**The job this skill does:** it derives the ideal customer profile from the companies that already said yes, by reading their public websites live, then finds or scores prospects against it with a source URL behind every claim, and drafts an opener for the top three. Find, qualify, write the first touch, in one run.
+**The job this skill does:** it derives the ideal customer profile from the companies that already said yes, by reading their public websites live, holds that up against the ICP you say you have and names your blind spots, then finds or scores prospects against it with a source URL behind every claim, and drafts an opener for the top three. Where you are wrong, who to call, what to say, in one run.
 
 **Boundary — what it never does:** it never touches people, emails or profiles, it never sends anything, and it says "insufficient evidence" instead of guessing.
 
@@ -28,7 +28,9 @@ While it runs, say: "It is fetching 22 company websites right now, twelve custom
 
 ## Show this — 25 seconds
 
-Open `out/prospect-fit.md`. Point to the fit column, then to the evidence column, then to the "Insufficient evidence" section at the bottom.
+Open `out/icp-gap.md` first, then `out/prospect-fit.md`.
+
+Say: "This is the part nobody has. Left column is what Apify says about itself, taken from its own pages. Right column is what its customers actually are. Half of them are SaaS products and the positioning never says the word. Sixty percent are hiring right now, which is a timing signal nobody is using. And Apify sells to solo developers and to enterprise, while its customers cluster at two hundred to a thousand people: the middle is where it actually wins." Point to the fit column, then to the evidence column, then to the "Insufficient evidence" section at the bottom.
 
 **Result:** the ICP is derived from 12 customer companies, 10 of which had usable public evidence, confidence `medium`. Three prospects score 80 or more: Omniconvert 84, UiPath 83, Axway 80. Four score under 30 and are marked unfit. `out/openers.md` holds one draft per top company, addressed to a role, never to a person.
 
@@ -36,7 +38,7 @@ Say: "Apify's real customer base is SaaS products and martech, hiring, English l
 
 **Evidence:** every ranked row in `prospect-fit.md` carries the evidence URL and its `retrieved_at`. Prospects whose page could not be read are listed separately and never given a score.
 
-**Fallback output was produced:** 2026-08-28 at 19:59 EEST, by running this exact seed prompt in Codex CLI 0.150.1 from a fresh `git clone` of this repository, on a clean Codex profile holding nothing but the login. Measured end to end: 86 seconds, of which the collector took 4 and the ranked table appeared first. Three clean profile runs of the same prompt tonight took 80, 115 and 86 seconds; all of the variation is model writing time, and the table was on screen within the first 20 seconds in every one.
+**Fallback output was produced:** 2026-08-28 at 20:09 EEST, by running this exact seed prompt in Codex CLI 0.150.1 from a fresh `git clone` of the submitted commit, on a clean Codex profile holding nothing but the login. Measured end to end: 68 seconds, of which the collector took 4 and the ranked table appeared first. Four clean profile runs of this prompt tonight took 80, 115, 86 and 68 seconds; all of the variation is model writing time, and the table was on screen within the first 20 seconds in every one.
 
 ## Evals — 10 seconds
 
@@ -63,6 +65,7 @@ The source URL, the HTTP status and the retrieval time of that page are in `demo
 
 ## If a judge asks
 
+- **How do you know our stated ICP is wrong?** We do not assert it. `out/icp-gap.md` puts your own words next to what your customers' sites show, axis by axis, and labels the rows. An overclaim is worded as a question to check, not a verdict, because a customer whose site does not say what it sells will not be counted in its real segment.
 - **Why not ask ChatGPT what our ICP is?** It would answer from memory of the internet. This fetches your own customers' sites, counts what they have in common, and shows the count. Change one customer and the profile changes.
 - **Is the fit score real or is the model inventing it?** The score is computed in `scripts/collect.py`, in Python, from the fetched pages. The model is told not to recompute or adjust it. Every component prints its own points and the reason.
 - **Does it work with our CRM?** Point it at your export. `company,domain` are the only required columns; `status`, `deal_size`, `days_to_close`, `industry`, `employees`, `country`, `revenue`, `retention` are used if present and reported as "not in input" if not. It also accepts a published Google Sheet CSV URL instead of a file.
