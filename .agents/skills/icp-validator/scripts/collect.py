@@ -698,6 +698,10 @@ def selftest():
         "pick_quotes must drop CTA fragments and keep the real sentence"
     assert pick_quotes("Accept All Cookies Manage Preferences Privacy Policy Settings Here.") == [], \
         "pick_quotes must return nothing rather than a cookie banner"
+    assert quotes_for({"text_excerpt": "Accept All Cookies Manage Preferences Settings Here.",
+                       "pages": [{"title": "Zitec, software development company in Bucharest"}]}) == \
+        ["Zitec, software development company in Bucharest"], \
+        "quotes_for must fall back to the page title, never to an empty list"
     print("SELFTEST OK")
     return 0
 
@@ -811,6 +815,15 @@ def pick_quotes(excerpt, meta_description=None, k=3):
                 return out
     return out
 
+def quotes_for(company):
+    """Never hand the drafting step an empty list: a model with no quote invents one."""
+    pages = company.get("pages") or [{}]
+    q = pick_quotes(company.get("text_excerpt"), pages[0].get("meta_description"))
+    if q:
+        return q
+    title = (pages[0].get("title") or "").strip()
+    return [title] if len(title) >= 20 else []
+
 def write_openers_input(icp, ranked, companies_by_domain, offer_path, outdir):
     """Slim file so the drafting step never has to read the big JSON."""
     offer_name, offer_lines = "the offer", []
@@ -829,7 +842,7 @@ def write_openers_input(icp, ranked, companies_by_domain, offer_path, outdir):
             continue
         c = companies_by_domain.get(r["domain"]) or {}
         excerpt = c.get("text_excerpt") or ""
-        quotes = pick_quotes(excerpt, (c.get("pages") or [{}])[0].get("meta_description"))
+        quotes = quotes_for(c)
         te = r.get("top_evidence") or {}
         top.append({"company": r["company"], "domain": r["domain"], "fit": r["fit"],
                     "evidence_url": te.get("url"), "retrieved_at": te.get("retrieved_at"),
