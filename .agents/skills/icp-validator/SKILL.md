@@ -1,6 +1,6 @@
 ---
 name: icp-validator
-description: "Derives the actual ideal customer profile from what your existing customers' public websites show, finds prospects from any public list page when you do not have a list, scores every prospect against that ICP with evidence URLs and retrieval dates, and drafts a first touch opener for the top three. Use when the user asks what is our real ICP, validate our ICP, ICP fit, score these prospects, qualify this prospect list, find companies like our customers, who should we contact first, or draft openers for the best fit companies."
+description: "Compares the ideal customer profile a company says it has against the one its closed customers actually show, and names the blind spots. Derives the actual ideal customer profile from what your existing customers' public websites show, finds prospects from any public list page when you do not have a list, scores every prospect against that ICP with evidence URLs and retrieval dates, and drafts a first touch opener for the top three. Use when the user asks what is our real ICP, validate our ICP, ICP fit, score these prospects, qualify this prospect list, find companies like our customers, who should we contact first, or draft openers for the best fit companies."
 ---
 
 # ICP validator
@@ -16,15 +16,18 @@ company is being invited to, and the prospects, given either way:
   social networks, press and job boards, and writes `out/discovered.csv`.
 
 CSVs need `company,domain`; `status`, `deal_size` and `days_to_close` are optional and
-only feed the CRM block. If the customers file or the offer is missing, ask and stop.
+only feed the CRM block. An optional declared ICP file, the positioning the company
+believes it has, turns on the declared versus actual comparison. If the customers file
+or the offer is missing, ask and stop.
 
 ## Steps
 
 1. Check the given files exist and have a `company` and a `domain` column. Do not open
    the network yourself: all fetching happens in step 2.
 2. Run exactly one of these, `--prospects` for a list, `--discover-from` for a page:
-   `python3 .agents/skills/icp-validator/scripts/collect.py --customers <customers> --prospects <prospects> --out out`
-   `python3 .agents/skills/icp-validator/scripts/collect.py --customers <customers> --discover-from <url> --discover-limit 10 --out out`
+   `python3 .agents/skills/icp-validator/scripts/collect.py --customers <customers> --prospects <prospects> --declared <declared> --out out`
+   `python3 .agents/skills/icp-validator/scripts/collect.py --customers <customers> --discover-from <url> --discover-limit 10 --declared <declared> --out out`
+   Drop `--declared` only when no declared ICP file was named.
    If Codex asks to allow network access, approve it. If the script prints `NO NETWORK`
    (exit 3), re-run the same command once network is approved. If it prints `REFUSED`
    (exit 2), report the reason verbatim and stop. Never edit the input to get past a refusal.
@@ -47,7 +50,10 @@ only feed the CRM block. If the customers file or the offer is missing, ask and 
    kind: if a quote candidate contains one, quote a different candidate rather than
    editing the company's own words. Skip AI tell phrases such as "in today's fast paced landscape", "I hope this email
    finds you well", "I wanted to reach out".
-6. Close with the five line ICP summary read from `out/icp-actual.md` (business line,
+6. If `out/icp-gap.md` exists, quote its blind spots verbatim, at most three, before the
+   summary. They are the finding the reader did not already know. Never soften an
+   overclaim row and never add one the file does not list.
+7. Close with the five line ICP summary read from `out/icp-actual.md` (business line,
    Romania share, hiring share, size band, top tech), the count of prospects with fit 80
    or more, and the output paths. Keep the whole reply under 40 lines.
 
@@ -70,7 +76,8 @@ only feed the CRM block. If the customers file or the offer is missing, ask and 
 
 ## Done when
 
-`out/icp-actual.md`, `out/prospect-fit.md`, `out/fit.json` and `out/openers.md` all exist, every ranked
+`out/icp-actual.md`, `out/prospect-fit.md`, `out/fit.json` and `out/openers.md` all exist,
+`out/icp-gap.md` exists whenever a declared ICP was given, every ranked
 prospect carries an evidence URL with its retrieval time, prospects with insufficient
 evidence are listed but not ranked, the limitations section is filled, and the ranked
 table has been printed in chat.

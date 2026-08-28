@@ -5,7 +5,7 @@ Paste into Codex from the repo root. Use this one when the question is
 
 ```
 $icp-validator Use demo/input/customers.csv as our customers and demo/input/offer.md as
-the offer. We have no prospect list. Source the prospects from the public sponsor page
+the offer, and demo/input/icp-declared.md as the ICP we think we have. We have no prospect list. Source the prospects from the public sponsor page
 https://www.devtalks.ro/ , print the ranked fit table as soon as the collector prints it,
 then draft the top three openers. Full reports go to out/.
 ```

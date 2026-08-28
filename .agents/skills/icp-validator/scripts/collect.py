@@ -824,6 +824,122 @@ def quotes_for(company):
     title = (pages[0].get("title") or "").strip()
     return [title] if len(title) >= 20 else []
 
+# The gap between the ICP a company writes down and the one its customers show is
+# where the useful surprises live. Matching is keyword presence in the declared text:
+# blunt, but it never invents a mismatch the reader cannot check against the file.
+DECLARED_SYNONYMS = {
+    "saas_product": ["saas", "software product", "platform", "product teams"],
+    "martech": ["marketing", "martech", "growth", "lead generation", "sentiment"],
+    "ecommerce": ["ecommerce", "e-commerce", "retail", "product development"],
+    "ai_llm": ["ai", "llm", "machine learning", "data feed"],
+    "agency": ["agency", "agencies", "consultancy"],
+    "fintech": ["fintech", "finance", "banking", "payments"],
+    "hr_payroll": ["hr", "payroll", "recruiting", "talent"],
+    "education": ["education", "university", "universities", "students", "course"],
+    "igaming": ["gaming", "igaming", "casino", "betting"],
+    "real_estate": ["real estate", "property", "hospitality", "travel"],
+    "healthtech": ["health", "medical", "clinic"],
+    "logistics": ["logistics", "shipping", "supply chain"],
+}
+
+def _declared_mentions(text, needles):
+    low = (text or "").lower()
+    return sorted({n for n in needles if n in low})
+
+def compare_icp(declared_text, icp, outdir):
+    """-> path. Writes the declared vs actual gap, with blind spots called out."""
+    rows, blind, over = [], [], []
+    share = icp.get("category_share") or {}
+    for tag, pct in sorted(share.items(), key=lambda kv: -kv[1])[:6]:
+        hits = _declared_mentions(declared_text, DECLARED_SYNONYMS.get(tag, [tag.replace("_", " ")]))
+        pct_i = int(round(pct * 100))
+        if hits:
+            rows.append((("Business line: %s" % tag), "named (%s)" % ", ".join(hits[:2]),
+                         "%d%% of customers" % pct_i, "match"))
+        else:
+            rows.append((("Business line: %s" % tag), "not named",
+                         "%d%% of customers" % pct_i, "blind spot" if pct >= 0.3 else "minor"))
+            if pct >= 0.3:
+                blind.append("%d%% of your customers are %s, and your public positioning "
+                             "never names that segment." % (pct_i, tag.replace("_", " ")))
+    for tag in DECLARED_SYNONYMS:
+        if tag in share:
+            continue
+        hits = _declared_mentions(declared_text, DECLARED_SYNONYMS[tag])
+        if len(hits) >= 2:
+            rows.append((("Business line: %s" % tag), "named (%s)" % ", ".join(hits[:2]),
+                         "0% of customers", "overclaim"))
+            over.append("You market to %s. No customer in this list was classified that way "
+                        "from its own homepage, which is either a segment you have not closed "
+                        "or a segment whose sites do not say so." % tag.replace("_", " "))
+
+    hs = icp.get("share_hiring")
+    if hs is not None:
+        hit = _declared_mentions(declared_text, ["hiring", "recruit", "growing team"])
+        rows.append(("Hiring right now", "named" if hit else "not named",
+                     "%d%% of customers" % int(round(hs * 100)),
+                     "match" if hit else ("blind spot" if hs >= 0.6 else "minor")))
+        if not hit and hs >= 0.6:
+            blind.append("%d%% of your customers are actively hiring. That is a timing "
+                         "signal you are not using anywhere in your messaging."
+                         % int(round(hs * 100)))
+    ro = icp.get("share_romania")
+    if ro is not None:
+        hit = _declared_mentions(declared_text, ["romania", "romanian", "bucharest"])
+        rows.append(("Romania", "named" if hit else "not named",
+                     "%d%% of customers" % int(round(ro * 100)),
+                     "match" if (bool(hit) == bool(ro >= 0.5)) else "mismatch"))
+    langs = icp.get("majority_languages") or []
+    if langs:
+        rows.append(("Site language", "not stated as a filter", "majority %s" % ", ".join(langs),
+                     "blind spot" if "en" in langs else "minor"))
+    band = icp.get("modal_size_band")
+    if band:
+        hit = _declared_mentions(declared_text, ["enterprise", "startup", "solo", "small team",
+                                                 "smb", "mid market"])
+        rows.append(("Company size", ", ".join(hit) if hit else "not named",
+                     "modal band %s" % band, "mismatch" if hit and band not in " ".join(hit) else "match"))
+        if hit and band not in " ".join(hit):
+            blind.append("You position at the two ends (%s) but your customers cluster at %s. "
+                         "The middle is where you actually win." % (", ".join(hit[:3]), band))
+
+    path = os.path.join(outdir, "icp-gap.md")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("# DECLARED ICP vs ACTUAL ICP\n\n")
+        f.write("Left column: what your own public positioning says, read from the declared "
+                "file. Right column: what the customers you actually closed show on their "
+                "websites, fetched in this run. Nothing here is inferred from private data.\n\n")
+        f.write("| Axis | You say | Your customers show | Verdict |\n| --- | --- | --- | --- |\n")
+        for a, b, c, d in rows:
+            f.write("| %s | %s | %s | **%s** |\n" % (a, b, c, d))
+        f.write("\n## Blind spots\n\n")
+        if blind:
+            for b in blind:
+                f.write("- %s\n" % b)
+        else:
+            f.write("None: every strong pattern in your customer base is already named in "
+                    "your positioning.\n")
+        f.write("\n## Where you are talking to the wrong room\n\n")
+        if over:
+            for o in over:
+                f.write("- %s\n" % o)
+        else:
+            f.write("Nothing declared is absent from the customer base.\n")
+        f.write("\n## How to read this\n\n")
+        f.write("- A **blind spot** is a pattern strong enough to target that you never "
+                "mention. It is usually the cheapest thing to fix: it costs a line of copy, "
+                "not a strategy.\n")
+        f.write("- An **overclaim** is a segment you market to and have not closed. Either "
+                "the message is wrong or the segment is.\n")
+        f.write("- Classification reads each customer's own homepage. A customer whose site "
+                "does not say what it sells will not be counted in its real segment, so read "
+                "an overclaim as a question to check, not a verdict.\n")
+        f.write("- This compares text to evidence, not opinion to opinion. Every number on "
+                "the right comes from a page in `evidence.json` with its retrieval time.\n")
+        f.write("- ICP confidence for this run: %s, derived from %s customers with usable "
+                "evidence.\n" % (icp.get("icp_confidence"), icp.get("n_with_evidence")))
+    return path, blind, over
+
 def write_openers_input(icp, ranked, companies_by_domain, offer_path, outdir):
     """Slim file so the drafting step never has to read the big JSON."""
     offer_name, offer_lines = "the offer", []
@@ -942,6 +1058,7 @@ def main():
     ap.add_argument("--offer", default="demo/input/offer.md")
     ap.add_argument("--discover-from", help="public list page (customers/sponsors/portfolio/directory) to source prospects from")
     ap.add_argument("--discover-limit", type=int, default=10)
+    ap.add_argument("--declared", help="file holding the ICP the company says it has")
     a = ap.parse_args()
 
     if a.selftest:
@@ -1025,6 +1142,15 @@ def main():
                                    {"customers": cust_ref, "prospects": pros_ref}, a.out,
                                    {"finished": utcnow()})
 
+    gap_md = None
+    if a.declared:
+        try:
+            with open(a.declared, "r", encoding="utf-8") as f:
+                gap_md, gap_blind, gap_over = compare_icp(f.read(), icp, a.out)
+        except OSError as e:
+            print("WARNING: could not read %s: %s (skipping the declared comparison)"
+                  % (a.declared, e))
+
     op_in = write_openers_input(icp, ranked, by_domain, a.offer, a.out)
 
     print("rank | company | domain | fit | verdict | top evidence")
@@ -1035,6 +1161,9 @@ def main():
               % (i, r["company"][:24], r["domain"][:26],
                  r["fit"] if r["fit"] is not None else "-", r["verdict"], eviden))
     print("ICP n=%d confidence=%s" % (icp["n_with_evidence"], icp["icp_confidence"]))
+    if gap_md:
+        print("DECLARED vs ACTUAL: %d blind spots, %d segments you market to and have not "
+              "closed -> %s" % (len(gap_blind), len(gap_over), gap_md))
     print("%d prospects with fit >= 80" % sum(1 for r in ranked if (r["fit"] or 0) >= 80))
     print(ev_path)
     print(fit_path)
